@@ -1,0 +1,6 @@
+{
+    "chat.agent.thinking.collapsedTools": "all",
+    "chat.customAgentInSubagent.enabled": true,
+    "chat.checkpoints.showFileChanges": true,
+    "chat.edits2.enabled": true
+}
