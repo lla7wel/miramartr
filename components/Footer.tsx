@@ -10,13 +10,13 @@ export function Footer() {
         <div className="rounded-3xl border border-slate-800/70 bg-slate-900/80 px-4 py-5 sm:px-6 sm:py-6 shadow-[0_18px_45px_rgba(0,0,0,0.65)] backdrop-blur">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,2.1fr)_minmax(0,1.4fr)]">
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="relative h-10 w-10 overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-900">
+            <div className="flex items-center gap-3">
+                <div className="relative h-11 w-11 overflow-hidden rounded-2xl">
                   <Image
                     src="/miramar-logo.png"
                     alt="Miramar logo"
                     fill
-                    className="object-contain"
+                    className="object-contain drop-shadow-[0_0_12px_rgba(0,0,0,0.6)]"
                   />
                 </div>
                 <div>
