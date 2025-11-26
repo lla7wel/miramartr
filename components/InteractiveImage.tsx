@@ -9,13 +9,13 @@ type InteractiveImageProps = ImageProps & {
 };
 
 export default function InteractiveImage({
-  maxTilt = 10,
+  maxTilt = 6,
   containerClassName = "",
   className = "",
   ...props
 }: InteractiveImageProps) {
   const [transform, setTransform] = useState(
-    "rotateX(0deg) rotateY(0deg) translateY(0px)"
+    "rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)"
   );
 
   function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
@@ -29,12 +29,12 @@ export default function InteractiveImage({
     const rotateX = ((midY - y) / midY) * maxTilt;
 
     setTransform(
-      `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`
+      `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px) scale(1.02)`
     );
   }
 
   function handleMouseLeave() {
-    setTransform("rotateX(0deg) rotateY(0deg) translateY(0px)");
+    setTransform("rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)");
   }
 
   return (

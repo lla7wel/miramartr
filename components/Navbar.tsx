@@ -30,15 +30,16 @@ export function Navbar() {
   const labels = NAV_LABELS[lang];
 
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-800 bg-slate-950/85 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-slate-800 bg-slate-950/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <div className="relative h-11 w-11 overflow-hidden rounded-2xl">
+          <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-900/80">
             <Image
               src="/miramar-logo.png"
               alt="Miramar logo"
-              fill
-              className="object-contain drop-shadow-[0_0_12px_rgba(0,0,0,0.6)]"
+              width={32}
+              height={32}
+              className="h-8 w-8 object-contain drop-shadow-[0_0_12px_rgba(0,0,0,0.6)]"
               priority
             />
           </div>

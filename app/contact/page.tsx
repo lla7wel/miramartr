@@ -1,21 +1,46 @@
+'use client';
+
 import InteractiveImage from "../../components/InteractiveImage";
+import { useLanguage } from "../../components/LanguageProvider";
+
+const CONTACT_COPY = {
+  en: {
+    badge: "Contact",
+    heading: "Share your RFQ, equipment list, or upcoming program.",
+    lead:
+      "Miramar responds to institutional enquiries from energy and industrial clients. Outline your scope, timelines, and key equipment families; we will align classification, documentation, and supply.",
+    reasons: [
+      "Project packages for oil & gas, power, or industrial plants.",
+      "Line pipe, steel, valves, rotating, and electrical packages.",
+      "Long-term supply programs and framework agreements.",
+    ],
+  },
+  tr: {
+    badge: "İletişim",
+    heading: "Teklif, ekipman listesi veya programınızı paylaşın.",
+    lead:
+      "Miramar enerji ve endüstriyel müşterilerden gelen kurumsal taleplere cevap verir. Kapsam, takvim ve ana ekipman ailelerini paylaşın; sınıflandırma, dokümantasyon ve tedariki uyumlu şekilde yönlendirelim.",
+    reasons: [
+      "Petrol & gaz, enerji veya endüstriyel tesis projeleri için paketler.",
+      "Boru hattı, çelik, vana, döner ekipman ve elektrik paketleri.",
+      "Uzun vadeli tedarik programları ve çerçeve anlaşmaları.",
+    ],
+  },
+} as const;
 
 export default function ContactPage() {
+  const { lang } = useLanguage();
+  const t = CONTACT_COPY[lang];
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 text-slate-50">
-      <div className="grid gap-10 md:grid-cols-[1.05fr,0.95fr] md:items-start">
+      <div className="grid gap-10 lg:grid-cols-[1.05fr,0.95fr] lg:items-start">
         <div className="space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">
-            Contact
+            {t.badge}
           </p>
-          <h1 className="text-3xl font-semibold sm:text-4xl">
-            Share your RFQ, equipment list, or upcoming program.
-          </h1>
-          <p className="text-sm text-slate-200 sm:text-base">
-            Miramar responds to institutional enquiries from energy and industrial clients. Outline
-            your scope, timelines, and key equipment families; we will align classification,
-            documentation, and supply.
-          </p>
+          <h1 className="text-3xl font-semibold sm:text-4xl">{t.heading}</h1>
+          <p className="text-sm text-slate-200 sm:text-base">{t.lead}</p>
           <InteractiveImage
             src="/miramar-contact-office.png"
             alt="Miramar contact office"
@@ -26,20 +51,16 @@ export default function ContactPage() {
             priority
           />
           <div className="space-y-1">
-            <p className="text-sm font-semibold text-white">What we typically receive</p>
+            <p className="text-sm font-semibold text-white">
+              {lang === "tr" ? "Sık gelen talepler" : "What we typically receive"}
+            </p>
             <ul className="space-y-1.5 text-sm text-slate-200">
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
-                <span>Project packages for oil &amp; gas, power, or industrial plants.</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
-                <span>Line pipe, steel, valves, rotating, and electrical packages.</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
-                <span>Long-term supply programs and framework agreements.</span>
-              </li>
+              {t.reasons.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
