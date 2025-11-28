@@ -40,9 +40,9 @@ export default function Home() {
           <div className="absolute left-12 bottom-0 h-64 w-64 -rotate-6 rounded-[38px] bg-gradient-to-tr from-white/10 via-transparent to-transparent blur-3xl opacity-50 animate-pulse" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
-            <div className="relative z-10 flex-1 space-y-6">
+        <section className="relative py-16 lg:py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-12 items-start">
+            <div className="relative z-10 space-y-6">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-300">
                 {c.badge}
               </p>
@@ -66,20 +66,20 @@ export default function Home() {
                   {c.secondaryCta}
                 </Link>
               </div>
-              <div className="grid gap-4 pt-2 text-xs sm:grid-cols-3">
-                <AnimatedCard className="h-full border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
+              <div className="mt-10 grid gap-4 text-xs sm:grid-cols-3">
+                <AnimatedCard className="h-full flex flex-col justify-center border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm">
                   <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Focus</p>
                   <p className="mt-1 font-semibold text-slate-100">
                     Oil &amp; gas, power, heavy industry
                   </p>
                 </AnimatedCard>
-                <AnimatedCard className="h-full border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
+                <AnimatedCard className="h-full flex flex-col justify-center border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm">
                   <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Clients</p>
                   <p className="mt-1 font-semibold text-slate-100">
                     Private industrial groups &amp; EPCs
                   </p>
                 </AnimatedCard>
-                <AnimatedCard className="h-full border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
+                <AnimatedCard className="h-full flex flex-col justify-center border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm">
                   <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Deliverables</p>
                   <p className="mt-1 font-semibold text-slate-100">
                     Heavy equipment supply with basic manufacturer documentation on request
@@ -88,17 +88,20 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative z-10 flex-1 space-y-4">
-              <InteractiveImage
-                src="/miramar-3d-hero.png"
-                alt="Miramar industrial 3D visual"
-                fill
-                priority
-                className="object-cover"
-                containerClassName="relative mb-4 h-56 sm:h-64 w-full"
-              />
-              <div className="relative h-[320px] sm:h-[380px] lg:h-[460px]">
-                <AnimatedCard className="absolute left-6 top-6 w-[65%] max-w-md -rotate-3 border border-slate-800/70 bg-slate-900/80 p-5 shadow-2xl shadow-black/50 transition duration-500">
+            <div className="relative z-10 mt-10 lg:mt-0 space-y-6">
+              <AnimatedCard className="overflow-hidden">
+                <InteractiveImage
+                  src="/miramar-3d-hero.png"
+                  alt="Miramar industrial 3D visual"
+                  width={1024}
+                  height={540}
+                  className="w-full max-h-80 rounded-3xl object-cover"
+                  containerClassName="w-full"
+                  priority
+                />
+              </AnimatedCard>
+              <div className="space-y-4">
+                <AnimatedCard className="h-full p-5 sm:p-6">
                   <div className="flex items-center justify-between">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
                       Oil &amp; gas mechanical equipment
@@ -120,7 +123,7 @@ export default function Home() {
                   </ul>
                 </AnimatedCard>
 
-                <AnimatedCard className="absolute right-4 top-16 w-[62%] max-w-sm rotate-3 border border-slate-800/60 bg-slate-900/80 p-4 shadow-2xl shadow-black/40 transition duration-500">
+                <AnimatedCard className="h-full p-5 sm:p-6">
                   <div className="flex items-center justify-between">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
                       Steel &amp; piping
@@ -144,7 +147,7 @@ export default function Home() {
                   </ul>
                 </AnimatedCard>
 
-                <AnimatedCard className="absolute bottom-6 left-12 w-[72%] max-w-md -rotate-2 border border-slate-800/60 bg-slate-900/80 p-4 shadow-2xl shadow-black/45 transition duration-500">
+                <AnimatedCard className="h-full p-5 sm:p-6">
                   <div className="flex items-center justify-between">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
                       Power &amp; electrification
@@ -168,7 +171,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
       <section className="bg-transparent">
