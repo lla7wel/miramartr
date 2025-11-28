@@ -2,8 +2,10 @@
 import Link from "next/link";
 
 const ADDRESS = "\u0130\u00c7 KAPI, Cumhuriyet, Ergenekon Cd. AHMETBEY PLAZA , 34380 \u015ei\u015fli/\u0130stanbul, T\u00fcrkiye";
-const MAP_LINK = "https://www.google.com/maps/place/%C4%B0%C3%87+KAPI,+Cumhuriyet,+Ergenekon+Cd.+AHMETBEY+PLAZA+,+34380+%C5%9Ei%C5%9Fli/%C4%B0stanbul,+T%C3%BCrkiye";
-const MAP_EMBED = "https://www.google.com/maps?q=%C4%B0%C3%87+KAPI,+Cumhuriyet,+Ergenekon+Cd.+AHMETBEY+PLAZA+,+34380+%C5%9Ei%C5%9Fli/%C4%B0stanbul,+T%C3%BCrkiye&output=embed";
+const MAP_LINK =
+  "https://www.google.com/maps/search/?api=1&query=%C4%B0%C3%87%20KAPI%2C%20Cumhuriyet%2C%20Ergenekon%20Cd.%20AHMETBEY%20PLAZA%20%2C%2034380%20%C5%9Ei%C5%9Fli%2F%C4%B0stanbul%2C%20T%C3%BCrkiye";
+const MAP_EMBED =
+  "https://www.google.com/maps?q=%C4%B0%C3%87%20KAPI%2C%20Cumhuriyet%2C%20Ergenekon%20Cd.%20AHMETBEY%20PLAZA%20%2C%2034380%20%C5%9Ei%C5%9Fli%2F%C4%B0stanbul%2C%20T%C3%BCrkiye&output=embed";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -90,7 +92,7 @@ export function Footer() {
                     <a
                       href={MAP_LINK}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noreferrer noopener"
                       className="flex-shrink-0 rounded-full bg-slate-800 px-3 py-1 text-[10px] font-semibold text-slate-50 shadow hover:bg-slate-700"
                     >
                       Open in Maps

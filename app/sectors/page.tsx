@@ -2,6 +2,7 @@
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
+import AnimatedCard from "../../components/AnimatedCard";
 
 const SECTORS_COPY = {
   en: {
@@ -60,30 +61,29 @@ export default function SectorsPage() {
   const t = SECTORS_COPY[lang];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 text-slate-50">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 text-slate-50">
       <div className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">{t.badge}</p>
         <h1 className="text-3xl font-semibold sm:text-4xl">{t.heading}</h1>
         <p className="max-w-3xl text-sm text-slate-200 sm:text-base">{t.lead}</p>
       </div>
 
-      <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         {sectorsData.map((sector, idx) => (
-          <div
-            key={t.sectors[idx]}
-            className="flex flex-col gap-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-lg shadow-black/30"
-          >
+          <AnimatedCard key={t.sectors[idx]} className="flex h-full flex-col p-4">
             <InteractiveImage
               src={sector.image}
               alt={t.sectors[idx]}
               width={320}
               height={160}
-              className="object-cover"
-              containerClassName="mb-3 h-28 w-full"
+              className="w-full max-h-52 rounded-3xl object-cover"
+              containerClassName="mb-3 h-40 w-full"
             />
-            <h2 className="text-[1.05rem] font-semibold text-white">{t.sectors[idx]}</h2>
-            <p className="text-sm text-slate-200">{sector.body}</p>
-          </div>
+            <div className="flex flex-1 flex-col gap-3">
+              <h2 className="text-[1.05rem] font-semibold text-white">{t.sectors[idx]}</h2>
+              <p className="text-sm text-slate-200">{sector.body}</p>
+            </div>
+          </AnimatedCard>
         ))}
       </div>
     </div>

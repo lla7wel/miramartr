@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import BrandBackground from "../components/BrandBackground";
+import BackgroundOrbits from "../components/BackgroundOrbits";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { LanguageProvider } from "../components/LanguageProvider";
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${manrope.className} bg-slate-950 text-slate-50 antialiased scroll-smooth relative`}
       >
         <BrandBackground />
+        <BackgroundOrbits />
         <LanguageProvider>
           <div className="relative z-10 flex min-h-screen flex-col">
             <Navbar />

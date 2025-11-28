@@ -2,6 +2,7 @@
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
+import AnimatedCard from "../../components/AnimatedCard";
 
 const SERVICES_COPY = {
   en: {
@@ -62,18 +63,18 @@ export default function ServicesPage() {
   const t = SERVICES_COPY[lang];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 text-slate-50">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 text-slate-50">
       <div className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">{t.badge}</p>
         <h1 className="text-3xl font-semibold sm:text-4xl">{t.heading}</h1>
         <p className="max-w-3xl text-sm text-slate-200 sm:text-base">{t.lead}</p>
       </div>
 
-      <div className="mt-8 grid gap-6 md:grid-cols-3">
+      <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service, idx) => (
-          <div
+          <AnimatedCard
             key={t.pillars[idx].title}
-            className="flex flex-col gap-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-black/30"
+            className="flex h-full flex-col gap-3 p-5"
           >
             <InteractiveImage
               src={service.image}
@@ -81,7 +82,7 @@ export default function ServicesPage() {
               width={320}
               height={200}
               className="object-cover"
-              containerClassName="h-32 w-full"
+              containerClassName="h-32 w-full rounded-2xl"
             />
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8202A]">
               {t.pillars[idx].tag}
@@ -95,7 +96,7 @@ export default function ServicesPage() {
                 </li>
               ))}
             </ul>
-          </div>
+          </AnimatedCard>
         ))}
       </div>
     </div>

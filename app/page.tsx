@@ -3,6 +3,7 @@
 import Link from "next/link";
 import InteractiveImage from "../components/InteractiveImage";
 import { useLanguage } from "../components/LanguageProvider";
+import AnimatedCard from "../components/AnimatedCard";
 
 const HERO_COPY = {
   en: {
@@ -66,24 +67,24 @@ export default function Home() {
                 </Link>
               </div>
               <div className="grid gap-4 pt-2 text-xs sm:grid-cols-3">
-                <div className="rounded-2xl border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
+                <AnimatedCard className="h-full border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
                   <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Focus</p>
                   <p className="mt-1 font-semibold text-slate-100">
                     Oil &amp; gas, power, heavy industry
                   </p>
-                </div>
-                <div className="rounded-2xl border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
+                </AnimatedCard>
+                <AnimatedCard className="h-full border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
                   <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Clients</p>
                   <p className="mt-1 font-semibold text-slate-100">
                     Private industrial groups &amp; EPCs
                   </p>
-                </div>
-                <div className="rounded-2xl border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
+                </AnimatedCard>
+                <AnimatedCard className="h-full border border-slate-700/70 bg-white/5 p-4 backdrop-blur-sm">
                   <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Deliverables</p>
                   <p className="mt-1 font-semibold text-slate-100">
                     Heavy equipment supply with basic manufacturer documentation on request
                   </p>
-                </div>
+                </AnimatedCard>
               </div>
             </div>
 
@@ -97,7 +98,7 @@ export default function Home() {
                 containerClassName="relative mb-4 h-56 sm:h-64 w-full"
               />
               <div className="relative h-[320px] sm:h-[380px] lg:h-[460px]">
-                <div className="absolute left-6 top-6 w-[65%] max-w-md -rotate-3 rounded-3xl border border-slate-800/70 bg-slate-900/80 p-5 shadow-2xl shadow-black/50 transition duration-500 hover:-translate-y-2 hover:shadow-black/70">
+                <AnimatedCard className="absolute left-6 top-6 w-[65%] max-w-md -rotate-3 border border-slate-800/70 bg-slate-900/80 p-5 shadow-2xl shadow-black/50 transition duration-500">
                   <div className="flex items-center justify-between">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
                       Oil &amp; gas mechanical equipment
@@ -117,9 +118,9 @@ export default function Home() {
                       Gate, ball, and control valves sized to pressure class, media, and service.
                     </li>
                   </ul>
-                </div>
+                </AnimatedCard>
 
-                <div className="absolute right-4 top-16 w-[62%] max-w-sm rotate-3 rounded-3xl border border-slate-800/60 bg-slate-900/80 p-4 shadow-2xl shadow-black/40 transition duration-500 hover:-translate-y-2 hover:shadow-black/60">
+                <AnimatedCard className="absolute right-4 top-16 w-[62%] max-w-sm rotate-3 border border-slate-800/60 bg-slate-900/80 p-4 shadow-2xl shadow-black/40 transition duration-500">
                   <div className="flex items-center justify-between">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
                       Steel &amp; piping
@@ -141,9 +142,9 @@ export default function Home() {
                       Structural steel and plate for industrial projects.
                     </li>
                   </ul>
-                </div>
+                </AnimatedCard>
 
-                <div className="absolute bottom-6 left-12 w-[72%] max-w-md -rotate-2 rounded-3xl border border-slate-800/60 bg-slate-900/80 p-4 shadow-2xl shadow-black/45 transition duration-500 hover:-translate-y-2 hover:shadow-black/60">
+                <AnimatedCard className="absolute bottom-6 left-12 w-[72%] max-w-md -rotate-2 border border-slate-800/60 bg-slate-900/80 p-4 shadow-2xl shadow-black/45 transition duration-500">
                   <div className="flex items-center justify-between">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
                       Power &amp; electrification
@@ -163,7 +164,7 @@ export default function Home() {
                       Power and control cables with accessories for plant distribution.
                     </li>
                   </ul>
-                </div>
+                </AnimatedCard>
               </div>
             </div>
           </div>
@@ -171,7 +172,7 @@ export default function Home() {
       </section>
 
       <section className="bg-transparent">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
           <div className="max-w-3xl space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">Overview</p>
             <h2 className="text-2xl font-semibold sm:text-3xl">Miramar at a glance</h2>
@@ -180,7 +181,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
             {[
               {
                 title: "About Miramar",
@@ -203,20 +204,21 @@ export default function Home() {
                 href: "/equipment",
               },
             ].map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="group flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-black/30 transition hover:-translate-y-1 hover:border-slate-700"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                  <span className="inline-flex items-center gap-1 text-sm text-[#F6D365] transition group-hover:translate-x-1">
-                    <span>Learn more</span>
-                    <span aria-hidden="true">-&gt;</span>
-                  </span>
-                </div>
-                <p className="mt-3 text-sm text-slate-300">{item.body}</p>
-              </Link>
+              <AnimatedCard key={item.title} className="h-full">
+                <Link
+                  href={item.href}
+                  className="group flex h-full flex-col rounded-3xl p-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8202A]"
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                    <span className="inline-flex items-center gap-1 text-sm text-[#F6D365] transition group-hover:translate-x-1">
+                      <span>Learn more</span>
+                      <span aria-hidden="true">-&gt;</span>
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm text-slate-300">{item.body}</p>
+                </Link>
+              </AnimatedCard>
             ))}
           </div>
         </div>

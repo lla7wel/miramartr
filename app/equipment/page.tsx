@@ -2,6 +2,7 @@
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
+import AnimatedCard from "../../components/AnimatedCard";
 
 const EQUIPMENT_COPY = {
   en: {
@@ -80,7 +81,7 @@ export default function EquipmentPage() {
   const t = EQUIPMENT_COPY[lang];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 space-y-10 text-slate-50">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 space-y-10 text-slate-50">
       <div className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">
           {t.badge}
@@ -89,30 +90,29 @@ export default function EquipmentPage() {
         <p className="max-w-3xl text-sm text-slate-200 sm:text-base">{t.lead}</p>
       </div>
 
-      <section className="grid gap-6 md:grid-cols-2">
+      <section className="grid gap-8 lg:grid-cols-3">
         {equipmentFamilies.map((family, idx) => (
-          <div
-            key={t.families[idx]}
-            className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-black/30"
-          >
+          <AnimatedCard key={t.families[idx]} className="flex h-full flex-col p-5">
             <InteractiveImage
               src={family.image}
               alt={t.families[idx]}
               width={400}
               height={260}
-              className="object-cover"
-              containerClassName="mb-3 h-40 w-full"
+              className="w-full max-h-56 rounded-3xl object-cover"
+              containerClassName="mb-3 h-48 w-full"
             />
-            <h2 className="text-sm font-semibold text-white">{t.families[idx]}</h2>
-            <ul className="space-y-1.5 text-sm text-slate-200">
-              {family.bullets.map((bullet) => (
-                <li key={bullet} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div className="flex flex-1 flex-col gap-3">
+              <h2 className="text-sm font-semibold text-white">{t.families[idx]}</h2>
+              <ul className="space-y-1.5 text-sm text-slate-200">
+                {family.bullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </AnimatedCard>
         ))}
       </section>
 

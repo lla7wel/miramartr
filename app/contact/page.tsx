@@ -2,6 +2,7 @@
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
+import AnimatedCard from "../../components/AnimatedCard";
 
 const ADDRESS = "\u0130\u00c7 KAPI, Cumhuriyet, Ergenekon Cd. AHMETBEY PLAZA , 34380 \u015ei\u015fli/\u0130stanbul, T\u00fcrkiye";
 const MAP_LINK = "https://www.google.com/maps/place/%C4%B0%C3%87+KAPI,+Cumhuriyet,+Ergenekon+Cd.+AHMETBEY+PLAZA+,+34380+%C5%9Ei%C5%9Fli/%C4%B0stanbul,+T%C3%BCrkiye";
@@ -34,7 +35,7 @@ export default function ContactPage() {
   const t = CONTACT_COPY[lang];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 text-slate-50">
+    <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 text-slate-50">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
         <div className="space-y-6">
           <div className="space-y-3">
@@ -45,97 +46,101 @@ export default function ContactPage() {
             <p className="text-sm text-slate-200 sm:text-base">{t.lead}</p>
           </div>
 
-          <div className="space-y-1">
-            <p className="text-sm font-semibold text-white">
-              {lang === "tr" ? "Sik gelen talepler" : "What we typically receive"}
-            </p>
-            <ul className="space-y-1.5 text-sm text-slate-200">
-              {t.reasons.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <AnimatedCard className="p-4 sm:p-5">
+            <div className="space-y-1">
+              <p className="text-sm font-semibold text-white">
+                {lang === "tr" ? "Sik gelen talepler" : "What we typically receive"}
+              </p>
+              <ul className="space-y-1.5 text-sm text-slate-200">
+                {t.reasons.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </AnimatedCard>
 
-          <form className="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-black/40 sm:p-6">
-            <div className="grid gap-4 sm:grid-cols-2">
+          <AnimatedCard className="p-5 sm:p-6">
+            <form className="space-y-4">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="name" className="text-xs font-medium text-slate-200">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    className="mt-1 block w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-50 outline-none ring-0 transition focus:border-[#B8202A] focus:ring-1 focus:ring-[#B8202A]"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="text-xs font-medium text-slate-200">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="name@company.com"
+                    className="mt-1 block w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-50 outline-none ring-0 transition focus:border-[#B8202A] focus:ring-1 focus:ring-[#B8202A]"
+                  />
+                </div>
+              </div>
+
               <div>
-                <label htmlFor="name" className="text-xs font-medium text-slate-200">
-                  Name
+                <label htmlFor="company" className="text-xs font-medium text-slate-200">
+                  Company
                 </label>
                 <input
-                  id="name"
-                  name="name"
+                  id="company"
+                  name="company"
                   type="text"
                   className="mt-1 block w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-50 outline-none ring-0 transition focus:border-[#B8202A] focus:ring-1 focus:ring-[#B8202A]"
                 />
               </div>
+
               <div>
-                <label htmlFor="email" className="text-xs font-medium text-slate-200">
-                  Email
+                <label htmlFor="message" className="text-xs font-medium text-slate-200">
+                  Message
                 </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="name@company.com"
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
                   className="mt-1 block w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-50 outline-none ring-0 transition focus:border-[#B8202A] focus:ring-1 focus:ring-[#B8202A]"
+                  placeholder="Scope, timelines, and key equipment families."
                 />
               </div>
-            </div>
 
-            <div>
-              <label htmlFor="company" className="text-xs font-medium text-slate-200">
-                Company
-              </label>
-              <input
-                id="company"
-                name="company"
-                type="text"
-                className="mt-1 block w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-50 outline-none ring-0 transition focus:border-[#B8202A] focus:ring-1 focus:ring-[#B8202A]"
-              />
-            </div>
+              <button
+                type="submit"
+                className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#B8202A] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-[#B8202A]/40 transition hover:bg-[#9c1b24]"
+              >
+                Submit enquiry
+              </button>
 
-            <div>
-              <label htmlFor="message" className="text-xs font-medium text-slate-200">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="mt-1 block w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-50 outline-none ring-0 transition focus:border-[#B8202A] focus:ring-1 focus:ring-[#B8202A]"
-                placeholder="Scope, timelines, and key equipment families."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#B8202A] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-[#B8202A]/40 transition hover:bg-[#9c1b24]"
-            >
-              Submit enquiry
-            </button>
-
-            <p className="pt-2 text-[10px] text-slate-400">
-              This form is for companies seeking heavy equipment for energy and industrial projects. A backend connection can be added later.
-            </p>
-          </form>
+              <p className="pt-2 text-[10px] text-slate-400">
+                This form is for companies seeking heavy equipment for energy and industrial projects. A backend connection can be added later.
+              </p>
+            </form>
+          </AnimatedCard>
         </div>
 
-        <div className="space-y-4">
-          <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-3 shadow-xl shadow-black/45">
+        <div className="space-y-4 mt-8 lg:mt-0">
+          <AnimatedCard className="p-3">
             <InteractiveImage
               src="/miramar-contact-office.png"
               alt="Miramar contact office"
               width={640}
               height={420}
               className="object-cover"
-              containerClassName="h-80 w-full max-h-96 rounded-2xl"
+              containerClassName="h-80 w-full max-h-80 rounded-2xl"
               priority
             />
-          </div>
+          </AnimatedCard>
         </div>
       </div>
 

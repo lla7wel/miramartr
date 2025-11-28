@@ -3,6 +3,7 @@
 import Link from "next/link";
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
+import AnimatedCard from "../../components/AnimatedCard";
 
 const ABOUT_COPY = {
   en: {
@@ -46,9 +47,9 @@ export default function AboutPage() {
   const t = ABOUT_COPY[lang];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16 space-y-10 text-slate-50">
-      <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
-        <div className="space-y-4">
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16 space-y-10 text-slate-50">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-12 lg:items-start">
+        <div className="space-y-4 lg:space-y-6">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">
             {t.badge}
           </p>
@@ -56,48 +57,47 @@ export default function AboutPage() {
           <p className="text-sm text-slate-200 sm:text-base">{t.lead1}</p>
           <p className="text-sm text-slate-200 sm:text-base">{t.lead2}</p>
         </div>
-        <InteractiveImage
-          src="/miramar-about-overview.png"
-          alt="Miramar overview"
-          width={480}
-          height={320}
-          className="object-cover"
-          containerClassName="mt-8 lg:mt-0 h-64 w-full lg:h-72"
-          priority
-        />
+        <AnimatedCard className="h-full flex items-center justify-center p-1">
+          <InteractiveImage
+            src="/miramar-about-overview.png"
+            alt="Miramar overview"
+            width={480}
+            height={320}
+            className="w-full max-h-96 rounded-3xl object-cover"
+            containerClassName="w-full"
+            priority
+          />
+        </AnimatedCard>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-3">
         {[
           { title: t.section1Title, body: t.section1Body },
           { title: t.section2Title, body: t.section2Body },
           { title: t.section3Title, body: t.section3Body },
         ].map((item) => (
-          <div
-            key={item.title}
-            className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-black/30"
-          >
+          <AnimatedCard key={item.title} className="h-full p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
               {item.title}
             </p>
             <p className="mt-3 text-sm text-slate-200">{item.body}</p>
-          </div>
+          </AnimatedCard>
         ))}
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-black/30">
+        <AnimatedCard className="h-full p-6">
           <h2 className="text-lg font-semibold text-white">Regional reach, clear communication</h2>
           <p className="mt-3 text-sm text-slate-200">
             Miramar supports projects in Turkey and nearby regional markets. We work with engineering and procurement teams that need reliable heavy equipment and clear communication without unnecessary complexity.
           </p>
-        </div>
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-black/30">
+        </AnimatedCard>
+        <AnimatedCard className="h-full p-6">
           <h2 className="text-lg font-semibold text-white">Transparent, traceable supply</h2>
           <p className="mt-3 text-sm text-slate-200">
             Equipment is sourced from vetted mills and OEMs. When available, manufacturer certificates and basic test reports can be provided with deliveries.
           </p>
-        </div>
+        </AnimatedCard>
       </div>
 
       <div className="flex flex-wrap gap-3 text-sm text-slate-200">
