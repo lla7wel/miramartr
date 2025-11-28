@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import InteractiveImage from "../../components/InteractiveImage";
@@ -9,9 +9,9 @@ const ABOUT_COPY = {
     badge: "About Miramar",
     heading: "Istanbul-based energy and industrial equipment partner.",
     lead1:
-      "Miramar is a mid-size regional supplier focused on oil & gas, power, and heavy industry. We serve state-owned entities and private groups that require spec-compliant equipment, clear documentation, and traceable supply chains.",
+      "Miramar is a mid-size regional supplier focused on oil & gas, power, and heavy industry. We serve regional private oil & gas, power, and industrial companies that require spec-compliant equipment and clear communication.",
     lead2:
-      "From Istanbul, we coordinate mills, OEMs, fabricators, and inspection partners so each package arrives documented and aligned with project and lender requirements. Our teams speak the language of technical standards, procurement gates, and audit-ready handover.",
+      "From Istanbul, we source heavy industrial equipment from vetted mills and OEMs for oil, gas, power, and industrial projects.",
     section1Title: "How we think",
     section1Body:
       "Equipment is risk, uptime, and reputation. We plan every package as if it will be audited.",
@@ -20,24 +20,24 @@ const ABOUT_COPY = {
       "Safety, technical compliance, documentation quality, and delivery under real project constraints.",
     section3Title: "Who we serve",
     section3Body:
-      "NOCs, ministries, utilities, EPCs, and industrial groups managing long-life assets.",
+      "Private industrial groups, EPCs, and energy companies managing long-life assets.",
   },
   tr: {
     badge: "Miramar Hakkında",
     heading: "İstanbul merkezli enerji ve endüstriyel ekipman ortağı.",
     lead1:
-      "Miramar, petrol ve gaz, enerji ve ağır sanayiye odaklanan bölgesel bir tedarikçidir. Standartlara uygun ekipman, net dokümantasyon ve izlenebilir tedarik zincirleri isteyen kamu ve özel kurumlarla çalışır.",
+      "Miramar, petrol ve gaz, enerji ve ağır sanayi odaklı bölgesel bir tedarikçidir. Bölgedeki özel petrol ve gaz, enerji ve endüstri şirketlerine şartnameye uygun ekipman ve net iletişim sunar.",
     lead2:
-      "İstanbul’dan, her paketin proje ve kredi şartlarına uygun, eksiksiz dokümantasyonla teslim edilmesi için haddehane, üretici, imalatçı ve gözetim firmalarını koordine ederiz.",
+      "İstanbul'dan, petrol, gaz, enerji ve endüstriyel projeler için onaylı haddehane ve OEM'lerden ağır ekipman tedarik ediyoruz.",
     section1Title: "Nasıl düşünürüz",
     section1Body:
       "Ekipman; risk, duruş süresi ve itibar demektir. Her paketi denetleniyormuş gibi planlarız.",
     section2Title: "Neye öncelik veririz",
     section2Body:
-      "Güvenlik, teknik uygunluk, dokümantasyon kalitesi ve gerçek proje kısıtları altında teslimat.",
+      "Güvenlik, teknik uygunluk, dokümantasyon kalitesi ve gerçek proje kısıtlarında teslimat.",
     section3Title: "Kime hizmet veririz",
     section3Body:
-      "NOC’ler, bakanlıklar, kamu kuruluşları, elektrik dağıtım şirketleri, EPC’ler ve ağır sanayi grupları.",
+      "Özel sanayi grupları, EPC'ler ve uzun ömürlü varlıkları yöneten enerji şirketleri.",
   },
 } as const;
 
@@ -87,19 +87,15 @@ export default function AboutPage() {
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-black/30">
-          <h2 className="text-lg font-semibold text-white">Regional reach, institutional mindset</h2>
+          <h2 className="text-lg font-semibold text-white">Regional reach, clear communication</h2>
           <p className="mt-3 text-sm text-slate-200">
-            Miramar works across the Middle East, North Africa, and adjacent industrial markets. We
-            respond to institutional procurement processes, offer structured documentation sets, and
-            adapt to governance requirements without compromising delivery.
+            Miramar supports projects in Turkey and nearby regional markets. We work with engineering and procurement teams that need reliable heavy equipment and clear communication without unnecessary complexity.
           </p>
         </div>
         <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-black/30">
           <h2 className="text-lg font-semibold text-white">Transparent, traceable supply</h2>
           <p className="mt-3 text-sm text-slate-200">
-            Equipment moves through verified mills, OEMs, and inspection agencies with clear tagging
-            and QA/MTC packages. We align to project specs, approved vendor lists, and lender
-            expectations so stakeholders remain confident end to end.
+            Equipment is sourced from vetted mills and OEMs. When available, manufacturer certificates and basic test reports can be provided with deliveries.
           </p>
         </div>
       </div>

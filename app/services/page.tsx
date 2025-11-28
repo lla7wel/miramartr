@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
@@ -8,21 +8,21 @@ const SERVICES_COPY = {
     badge: "Services",
     heading: "From equipment definition to documented delivery.",
     lead:
-      "Engage Miramar for compliant sourcing, project logistics with complete documentation, and lifecycle support tailored to institutional energy and industrial clients.",
+      "Engage Miramar for compliant sourcing and lifecycle support tailored to regional private oil & gas, power, and industrial companies.",
     pillars: [
       { tag: "Pillar I", title: "Equipment definition & supply" },
-      { tag: "Pillar II", title: "Project logistics & documentation" },
+      { tag: "Pillar II", title: "Documentation support" },
       { tag: "Pillar III", title: "Lifecycle & replacement support" },
     ],
   },
   tr: {
     badge: "Hizmetler",
-    heading: "Ekipman tanımından belgeli teslimata kadar.",
+    heading: "Ekipman tanımından teslimata kadar.",
     lead:
-      "Miramar, kurumsal enerji ve sanayi müşterileri için uygunluk gözeten tedarik, eksiksiz dokümantasyonla lojistik ve yaşam döngüsü desteği sunar.",
+      "Miramar, bölgesel özel petrol ve gaz, enerji ve sanayi şirketleri için uygunluk gözeten tedarik ve yaşam döngüsü desteği sunar.",
     pillars: [
       { tag: "Sütun I", title: "Ekipman tanımı ve tedarik" },
-      { tag: "Sütun II", title: "Proje lojistiği ve dokümantasyon" },
+      { tag: "Sütun II", title: "Dokümantasyon desteği" },
       { tag: "Sütun III", title: "Yaşam döngüsü ve yedek destek" },
     ],
   },
@@ -33,17 +33,16 @@ const services = [
     bullets: [
       "Oil & gas rotating equipment, valves, and process items classified to spec.",
       "Steel, piping, flanges, fittings, and structural packages.",
-      "Electrical power: transformers, switchgear, UPS, storage.",
-      "Protection & control: relays, SCADA, PLCs, I/O modules.",
+      "Electrical power: switchgear, switchboards, and motor control centers.",
+      "Power and control cables with accessories for plant distribution.",
     ],
     image: "/miramar-service-supply.png",
   },
   {
     bullets: [
-      "Packing and tagging aligned to project BOMs and work packs.",
-      "MTCs, test reports, and EN 10204 documentation sets.",
-      "Third-party inspection (DNV, SGS, TUV or equivalent).",
-      "Shipping, Incoterms, and customs coordination.",
+      "Coordinate basic manufacturer documentation (datasheets, manuals, and available test reports).",
+      "Include manufacturer certificates with deliveries when requested.",
+      "Keep documentation lean and aligned with what project teams actually need.",
     ],
     image: "/miramar-service-logistics.png",
   },
@@ -51,8 +50,8 @@ const services = [
     bullets: [
       "Spares and replacement strategies for critical lines.",
       "Equivalency checks when original models are obsolete.",
-      "Support for upgrades, brownfield modifications, tie-ins.",
-      "Coordination with local service providers when needed.",
+      "Support for upgrades, brownfield modifications, and tie-ins.",
+      "Technical sourcing support to keep plants online.",
     ],
     image: "/miramar-service-lifecycle.png",
   },

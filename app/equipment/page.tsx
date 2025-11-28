@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
@@ -8,12 +8,11 @@ const EQUIPMENT_COPY = {
     badge: "Equipment & partners",
     heading: "Equipment families we support.",
     lead:
-      "Miramar curates equipment across oil & gas, power, and heavy industry. Packages are classified, documented, and aligned with project requirements.",
+      "Miramar supplies heavy equipment across oil & gas, power, and heavy industry. Packages align to project specifications with basic manufacturer documentation available on request.",
     families: [
-      "Oil & gas equipment",
+      "Oil & gas mechanical equipment",
       "Steel, piping & fabricated items",
-      "Electrical power equipment",
-      "Protection, control & safety",
+      "Power & electrification",
     ],
     partnerRolesTitle: "Typical partner roles in a Miramar package",
     partnerSelectTitle: "How we choose and align partners",
@@ -22,12 +21,11 @@ const EQUIPMENT_COPY = {
     badge: "Ekipman ve iş ortakları",
     heading: "Desteklediğimiz ekipman aileleri.",
     lead:
-      "Miramar; petrol ve gaz, enerji ve ağır sanayide ekipmanları sınıflandırır ve projeye uygun dokümantasyonla teslim eder.",
+      "Miramar; petrol ve gaz, enerji ve ağır sanayide ekipmanları projeye uygun şekilde tedarik eder. Gerektiğinde temel üretici dokümantasyonu ile teslim eder.",
     families: [
-      "Petrol ve gaz ekipmanları",
+      "Petrol ve gaz mekanik ekipmanları",
       "Çelik, boru ve imalat ürünleri",
-      "Elektrik enerji ekipmanları",
-      "Koruma, kontrol ve güvenlik",
+      "Güç ve elektrifikasyon",
     ],
     partnerRolesTitle: "Miramar paketindeki tipik ortak rolleri",
     partnerSelectTitle: "Ortakları nasıl seçiyor ve hizalıyoruz",
@@ -56,36 +54,25 @@ const equipmentFamilies = [
   {
     image: "/miramar-3d-power.png",
     bullets: [
-      "MV/LV transformers and switchgear.",
-      "MCCs, drives, and motor starters.",
-      "Energy storage: UPS batteries and backup systems.",
-      "Surge protection and grounding systems.",
-    ],
-  },
-  {
-    image: "/miramar-3d-safety-control.png",
-    bullets: [
-      "Relays, SCADA, PLCs, and I/O modules.",
-      "Fire-fighting skids, detection, and alarm systems.",
-      "Gas detection and safety instrumentation.",
-      "Control valves, field instruments, and junction boxes.",
+      "Switchgear and switchboards for industrial power distribution.",
+      "Motor control centers (MCCs), drives, and starters.",
+      "Power and control cables with terminations and accessories.",
+      "Bus ducts and panelboards for plant electrification.",
     ],
   },
 ];
 
 const partnerRoles = [
   "Steel mills and pipe manufacturers for line pipe and structures.",
-  "OEMs for rotating equipment, valves, electrical, and control.",
+  "OEMs for rotating equipment, valves, electrical equipment.",
   "Fabricators for spools, skids, and simple assemblies.",
-  "Testing laboratories with ISO/CNAS accreditation.",
-  "Third-party inspection firms (e.g., DNV, SGS, TUV equivalents).",
 ];
 
 const partnerSelection = [
   "Fit with required standards (API, ISO, IEC, and project specs).",
-  "Ability to support documentation and after-sales obligations.",
+  "Ability to meet project specifications and communicate clearly.",
   "Experience in oil & gas, power, and critical infrastructure.",
-  "Clarity on roles between mills, OEMs, agents, and local service.",
+  "Clarity on roles between mills, OEMs, agents, and on-site teams.",
 ];
 
 export default function EquipmentPage() {
@@ -141,8 +128,7 @@ export default function EquipmentPage() {
             ))}
           </ul>
           <p className="pt-1 text-sm text-slate-200">
-            Our role is to design the supply chain so that each piece of equipment is documented,
-            traceable, and aligned with approved vendor lists and specifications.
+            Our role is to source heavy equipment from vetted manufacturers and align deliveries with your technical specifications.
           </p>
         </div>
 
@@ -157,8 +143,7 @@ export default function EquipmentPage() {
             ))}
           </ul>
           <p className="pt-1 text-sm text-slate-200">
-            Detailed partner information and references can be provided as part of a formal
-            capability or prequalification package when required by your procedures.
+            Detailed partner information can be shared as part of capability or prequalification material when requested.
           </p>
         </div>
       </section>

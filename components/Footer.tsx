@@ -1,5 +1,9 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
+
+const ADDRESS = "\u0130\u00c7 KAPI, Cumhuriyet, Ergenekon Cd. AHMETBEY PLAZA , 34380 \u015ei\u015fli/\u0130stanbul, T\u00fcrkiye";
+const MAP_LINK = "https://www.google.com/maps/place/%C4%B0%C3%87+KAPI,+Cumhuriyet,+Ergenekon+Cd.+AHMETBEY+PLAZA+,+34380+%C5%9Ei%C5%9Fli/%C4%B0stanbul,+T%C3%BCrkiye";
+const MAP_EMBED = "https://www.google.com/maps?q=%C4%B0%C3%87+KAPI,+Cumhuriyet,+Ergenekon+Cd.+AHMETBEY+PLAZA+,+34380+%C5%9Ei%C5%9Fli/%C4%B0stanbul,+T%C3%BCrkiye&output=embed";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -41,7 +45,7 @@ export function Footer() {
 
                 <div className="space-y-1 text-xs text-slate-400">
                   <p className="font-semibold text-slate-300">Head office</p>
-                  <p>Ergenekon, Halaskargazi Cd., Şişli/İstanbul, Türkiye</p>
+                  <p>{ADDRESS}</p>
                 </div>
               </div>
 
@@ -75,18 +79,16 @@ export function Footer() {
                   <div className="h-40 w-full">
                     <iframe
                       title="Miramar head office on Google Maps"
-                      src="https://www.google.com/maps?q=Ergenekon,+Halaskargazi+Cd.,+Şişli/İstanbul,+Türkiye&output=embed"
+                      src={MAP_EMBED}
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                       className="h-full w-full border-0"
                     />
                   </div>
                   <div className="flex items-center justify-between gap-2 px-3 py-2 text-[11px] text-slate-200">
-                    <span className="line-clamp-2">
-                      Ergenekon, Halaskargazi Cd., Şişli/İstanbul, Türkiye
-                    </span>
+                    <span className="line-clamp-2">{ADDRESS}</span>
                     <a
-                      href="https://www.google.com/maps/place/Ergenekon,+Halaskargazi+Cd.,+Şişli/İstanbul,+Türkiye"
+                      href={MAP_LINK}
                       target="_blank"
                       rel="noreferrer"
                       className="flex-shrink-0 rounded-full bg-slate-800 px-3 py-1 text-[10px] font-semibold text-slate-50 shadow hover:bg-slate-700"
@@ -99,8 +101,8 @@ export function Footer() {
             </div>
 
             <div className="mt-6 flex flex-col gap-3 border-t border-slate-800/70 pt-4 text-[11px] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-              <p>© {year} Miramar. All rights reserved.</p>
-              <p className="text-slate-500">Built for institutional energy &amp; industrial clients.</p>
+              <p>&copy; {year} Miramar. All rights reserved.</p>
+              <p className="text-slate-500">Built for regional private energy &amp; industrial companies.</p>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
@@ -8,28 +8,26 @@ const SECTORS_COPY = {
     badge: "Sectors",
     heading: "Where Miramar operates.",
     lead:
-      "Reliability, uptime, and compliance drive our work. We tailor equipment packages and documentation to the demands of each sector.",
+      "Reliability, uptime, and technical fit drive our work. We tailor heavy equipment supply to the demands of each sector.",
     sectors: [
       "Upstream oil & gas",
       "Midstream & downstream",
       "Power generation & utilities",
       "Industrial plants",
       "Infrastructure & logistics",
-      "Government & programs",
     ],
   },
   tr: {
     badge: "Sektörler",
-    heading: "Miramar’ın faaliyet gösterdiği alanlar.",
+    heading: "Miramar'ın faaliyet gösterdiği alanlar.",
     lead:
-      "İşimizde güvenilirlik, çalışma süresi ve uygunluk esastır. Her sektörün gereksinimlerine göre ekipman paketlerini ve dokümantasyonu şekillendiriyoruz.",
+      "Güvenilirlik, çalışma süresi ve teknik uyum işe yön verir. Her sektörün gereksinimine göre ağır ekipman tedarikini şekillendiriyoruz.",
     sectors: [
       "Yukarı akış petrol ve gaz",
       "Orta ve aşağı akış",
       "Enerji üretimi ve kamu hizmetleri",
       "Endüstriyel tesisler",
       "Altyapı ve lojistik",
-      "Kamu projeleri ve programlar",
     ],
   },
 } as const;
@@ -54,10 +52,6 @@ const sectorsData = [
   {
     body: "Ports, logistics hubs, storage terminals, and fuel distribution networks.",
     image: "/miramar-sector-infrastructure.png",
-  },
-  {
-    body: "Projects sponsored by ministries, NOCs, and public entities with high documentation requirements.",
-    image: "/miramar-sector-government.png",
   },
 ];
 
