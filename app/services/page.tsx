@@ -1,62 +1,94 @@
-﻿'use client';
+'use client';
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
 import AnimatedCard from "../../components/AnimatedCard";
+import { CORE_POSITIONING } from "../../lib/constants";
 
 const SERVICES_COPY = {
   en: {
     badge: "Services",
     heading: "From equipment definition to documented delivery.",
+    positioning: CORE_POSITIONING.en,
     lead:
-      "Engage Miramar for compliant sourcing and lifecycle support tailored to regional private oil & gas, power, and industrial companies.",
+      "Engage Miramar for specification-aligned sourcing and lifecycle support tailored to regional private oil & gas, power, and industrial companies.",
     pillars: [
-      { tag: "Pillar I", title: "Equipment definition & supply" },
-      { tag: "Pillar II", title: "Documentation support" },
-      { tag: "Pillar III", title: "Lifecycle & replacement support" },
+      {
+        tag: "Pillar I",
+        title: "Equipment definition & supply",
+        bullets: [
+          "Oil & gas rotating equipment, valves, and process items classified to specification.",
+          "Steel, piping, flanges, fittings, and structural packages.",
+          "Electrical power: switchgear, switchboards, and motor control centers.",
+          "Power and control cables with accessories for plant distribution.",
+        ],
+        image: "/miramar-service-supply.png",
+      },
+      {
+        tag: "Pillar II",
+        title: "Documentation and QA/QC",
+        bullets: [
+          "Coordinate manufacturer data books, manuals, and available test reports.",
+          "Include manufacturer certificates, EN 10204 material certificates, and QA/QC packs when required.",
+          "Align documentation structure with client expectations for handover.",
+        ],
+        image: "/miramar-service-logistics.png",
+      },
+      {
+        tag: "Pillar III",
+        title: "Lifecycle & replacement support",
+        bullets: [
+          "Spares and replacement strategies for critical lines.",
+          "Equivalency checks when original models are obsolete.",
+          "Support for upgrades, brownfield modifications, and tie-ins.",
+          "Technical sourcing support to keep plants online.",
+        ],
+        image: "/miramar-service-lifecycle.png",
+      },
     ],
   },
   tr: {
-    badge: "Hizmetler",
-    heading: "Ekipman tanımından teslimata kadar.",
+    badge: "Services",
+    heading: "From equipment definition to documented delivery.",
+    positioning: CORE_POSITIONING.tr,
     lead:
-      "Miramar, bölgesel özel petrol ve gaz, enerji ve sanayi şirketleri için uygunluk gözeten tedarik ve yaşam döngüsü desteği sunar.",
+      "Engage Miramar for specification-aligned sourcing and lifecycle support tailored to regional private oil & gas, power, and industrial companies.",
     pillars: [
-      { tag: "Sütun I", title: "Ekipman tanımı ve tedarik" },
-      { tag: "Sütun II", title: "Dokümantasyon desteği" },
-      { tag: "Sütun III", title: "Yaşam döngüsü ve yedek destek" },
+      {
+        tag: "Pillar I",
+        title: "Equipment definition & supply",
+        bullets: [
+          "Oil & gas rotating equipment, valves, and process items classified to specification.",
+          "Steel, piping, flanges, fittings, and structural packages.",
+          "Electrical power: switchgear, switchboards, and motor control centers.",
+          "Power and control cables with accessories for plant distribution.",
+        ],
+        image: "/miramar-service-supply.png",
+      },
+      {
+        tag: "Pillar II",
+        title: "Documentation and QA/QC",
+        bullets: [
+          "Coordinate manufacturer data books, manuals, and available test reports.",
+          "Include manufacturer certificates, EN 10204 material certificates, and QA/QC packs when required.",
+          "Align documentation structure with client expectations for handover.",
+        ],
+        image: "/miramar-service-logistics.png",
+      },
+      {
+        tag: "Pillar III",
+        title: "Lifecycle & replacement support",
+        bullets: [
+          "Spares and replacement strategies for critical lines.",
+          "Equivalency checks when original models are obsolete.",
+          "Support for upgrades, brownfield modifications, and tie-ins.",
+          "Technical sourcing support to keep plants online.",
+        ],
+        image: "/miramar-service-lifecycle.png",
+      },
     ],
   },
 } as const;
-
-const services = [
-  {
-    bullets: [
-      "Oil & gas rotating equipment, valves, and process items classified to spec.",
-      "Steel, piping, flanges, fittings, and structural packages.",
-      "Electrical power: switchgear, switchboards, and motor control centers.",
-      "Power and control cables with accessories for plant distribution.",
-    ],
-    image: "/miramar-service-supply.png",
-  },
-  {
-    bullets: [
-      "Coordinate basic manufacturer documentation (datasheets, manuals, and available test reports).",
-      "Include manufacturer certificates with deliveries when requested.",
-      "Keep documentation lean and aligned with what project teams actually need.",
-    ],
-    image: "/miramar-service-logistics.png",
-  },
-  {
-    bullets: [
-      "Spares and replacement strategies for critical lines.",
-      "Equivalency checks when original models are obsolete.",
-      "Support for upgrades, brownfield modifications, and tie-ins.",
-      "Technical sourcing support to keep plants online.",
-    ],
-    image: "/miramar-service-lifecycle.png",
-  },
-];
 
 export default function ServicesPage() {
   const { lang } = useLanguage();
@@ -67,29 +99,27 @@ export default function ServicesPage() {
       <div className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">{t.badge}</p>
         <h1 className="text-3xl font-semibold sm:text-4xl">{t.heading}</h1>
+        <p className="max-w-3xl text-sm text-slate-200 sm:text-base">{t.positioning}</p>
         <p className="max-w-3xl text-sm text-slate-200 sm:text-base">{t.lead}</p>
       </div>
 
       <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {services.map((service, idx) => (
-          <AnimatedCard
-            key={t.pillars[idx].title}
-            className="flex h-full flex-col gap-3 p-5"
-          >
+        {t.pillars.map((pillar) => (
+          <AnimatedCard key={pillar.title} className="flex h-full flex-col gap-3 p-5">
             <InteractiveImage
-              src={service.image}
-              alt={t.pillars[idx].title}
+              src={pillar.image}
+              alt={pillar.title}
               width={320}
               height={200}
               className="object-cover"
               containerClassName="h-32 w-full rounded-2xl"
             />
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8202A]">
-              {t.pillars[idx].tag}
+              {pillar.tag}
             </p>
-            <h2 className="text-sm font-semibold text-white">{t.pillars[idx].title}</h2>
+            <h2 className="text-sm font-semibold text-white">{pillar.title}</h2>
             <ul className="space-y-1.5 text-sm text-slate-200">
-              {service.bullets.map((bullet) => (
+              {pillar.bullets.map((bullet) => (
                 <li key={bullet} className="flex gap-2">
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
                   <span>{bullet}</span>

@@ -1,32 +1,225 @@
-﻿'use client';
+'use client';
 
 import Link from "next/link";
 import InteractiveImage from "../components/InteractiveImage";
 import { useLanguage } from "../components/LanguageProvider";
 import AnimatedCard from "../components/AnimatedCard";
+import { CORE_POSITIONING } from "../lib/constants";
 
-const HERO_COPY = {
+const HOME_COPY = {
   en: {
     badge: "Istanbul | Energy & Industrial Equipment",
     title: "Project-ready supply for oil & gas, power, and heavy industry.",
+    positioning: CORE_POSITIONING.en,
     body:
-      "Miramar supplies spec-compliant rotating equipment, valves, and steel-based items for regional private oil & gas, power, and industrial companies. Share RFQs or equipment lists and we'll respond with options from vetted mills and OEMs.",
+      "We plan equipment packages to client specifications, align documentation early, and coordinate with mills, OEMs, and inspectors to de-risk delivery for regional energy and industrial projects.",
     primaryCta: "Share an RFQ / package list",
     secondaryCta: "View equipment coverage",
+    focusBlocks: [
+      { label: "Focus", value: "Energy, oil & gas, heavy industry" },
+      { label: "Clients", value: "Private industrial groups, EPCs, utilities" },
+      {
+        label: "Deliverables",
+        value:
+          "Heavy equipment supply with manufacturer documentation and QA/QC packs when required.",
+      },
+    ],
+    overviewOverline: "Overview",
+    overviewTitle: "Miramar at a glance",
+    overviewBody:
+      "Istanbul-based institutional supplier supporting oil & gas, power, and industrial projects with traceable heavy equipment from vetted mills and OEMs.",
+    learnMore: "Learn more",
+    overviewCards: [
+      {
+        title: "About Miramar",
+        body:
+          "Institutional partner for private oil & gas, power, and industrial companies based in Istanbul.",
+        href: "/about",
+      },
+      {
+        title: "Services",
+        body:
+          "Equipment definition, documentation and QA/QC coordination, lifecycle and replacement support.",
+        href: "/services",
+      },
+      {
+        title: "Sectors",
+        body:
+          "Upstream, midstream, power generation, industrial plants, and infrastructure clients.",
+        href: "/sectors",
+      },
+      {
+        title: "Equipment",
+        body:
+          "Rotating equipment, valves, piping and steel, and electrification packages aligned to client specs.",
+        href: "/equipment",
+      },
+    ],
+    featureStacks: [
+      {
+        overline: "Oil & gas mechanical equipment",
+        tag: "API / ISO",
+        summary: "Spec-compliant rotating equipment and valves for energy service.",
+        bullets: [
+          "API/ISO pumps, compressors, and turbines sized for upstream and midstream services.",
+          "Gate, ball, control, and safety valves aligned to pressure class, media, and service.",
+        ],
+      },
+      {
+        overline: "Steel & piping",
+        tag: "Mills",
+        summary: "Steel-based items for pipelines and industrial projects.",
+        bullets: [
+          "Line pipe, butt-weld fittings, flanges, gaskets, and bolting sets.",
+          "Structural steel and plate for industrial projects.",
+        ],
+      },
+      {
+        overline: "Power & electrification",
+        tag: "Power",
+        summary: "Distribution equipment for industrial loads.",
+        bullets: [
+          "Switchgear, switchboards, and motor control centers for industrial loads.",
+          "Power and control cables with accessories and terminations.",
+        ],
+      },
+    ],
+    whyOverline: "Why Miramar",
+    whyTitle: "Why Miramar for institutional projects",
+    whyBody:
+      "Built for clients that need specification alignment, documentation discipline, and reliable delivery.",
+    whyCards: [
+      {
+        title: "Technical compliance",
+        body: "API / ISO / IEC-aligned products and documentation where required.",
+      },
+      {
+        title: "Documentation quality",
+        body:
+          "Manufacturer data books, test certificates, EN 10204 MTCs, and QA/QC packs prepared for client handover.",
+      },
+      {
+        title: "Transparent supply chain",
+        body: "Traceability from mill or OEM to site, with clear documentation at each step.",
+      },
+      {
+        title: "On-time delivery",
+        body: "Planning around project schedules, inspection windows, and site constraints.",
+      },
+    ],
+    hseTitle: "HSE & compliance",
+    hseBody:
+      "Miramar aligns equipment selection and documentation with client HSE and QA/QC frameworks. Where required, we coordinate third-party inspection (DNV, SGS, TÜV or equivalent) and deliver the associated test reports and certificates as part of the project handover package.",
   },
   tr: {
-    badge: "Istanbul | Enerji ve Endüstriyel Ekipman",
-    title: "Petrol, enerji ve ağır sanayi için proje odaklı tedarik.",
+    badge: "Istanbul | Energy & Industrial Equipment",
+    title: "Project-ready supply for oil & gas, power, and heavy industry.",
+    positioning: CORE_POSITIONING.tr,
     body:
-      "Miramar, bölgesel özel petrol ve gaz, enerji ve endüstriyel şirketler için şartnameye uygun döner ekipman, vanalar ve çelik ürünleri tedarik eder. Teklif veya ekipman listenizi paylaşın; onaylı haddehane ve OEM seçenekleriyle geri dönüş yapalım.",
-    primaryCta: "Teklif / ekipman listesi paylaş",
-    secondaryCta: "Ekipman kapsamını gör",
+      "We plan equipment packages to client specifications, align documentation early, and coordinate with mills, OEMs, and inspectors to de-risk delivery for regional energy and industrial projects.",
+    primaryCta: "Share an RFQ / package list",
+    secondaryCta: "View equipment coverage",
+    focusBlocks: [
+      { label: "Focus", value: "Energy, oil & gas, heavy industry" },
+      { label: "Clients", value: "Private industrial groups, EPCs, utilities" },
+      {
+        label: "Deliverables",
+        value:
+          "Heavy equipment supply with manufacturer documentation and QA/QC packs when required.",
+      },
+    ],
+    overviewOverline: "Overview",
+    overviewTitle: "Miramar at a glance",
+    overviewBody:
+      "Istanbul-based institutional supplier supporting oil & gas, power, and industrial projects with traceable heavy equipment from vetted mills and OEMs.",
+    learnMore: "Learn more",
+    overviewCards: [
+      {
+        title: "About Miramar",
+        body:
+          "Institutional partner for private oil & gas, power, and industrial companies based in Istanbul.",
+        href: "/about",
+      },
+      {
+        title: "Services",
+        body:
+          "Equipment definition, documentation and QA/QC coordination, lifecycle and replacement support.",
+        href: "/services",
+      },
+      {
+        title: "Sectors",
+        body:
+          "Upstream, midstream, power generation, industrial plants, and infrastructure clients.",
+        href: "/sectors",
+      },
+      {
+        title: "Equipment",
+        body:
+          "Rotating equipment, valves, piping and steel, and electrification packages aligned to client specs.",
+        href: "/equipment",
+      },
+    ],
+    featureStacks: [
+      {
+        overline: "Oil & gas mechanical equipment",
+        tag: "API / ISO",
+        summary: "Spec-compliant rotating equipment and valves for energy service.",
+        bullets: [
+          "API/ISO pumps, compressors, and turbines sized for upstream and midstream services.",
+          "Gate, ball, control, and safety valves aligned to pressure class, media, and service.",
+        ],
+      },
+      {
+        overline: "Steel & piping",
+        tag: "Mills",
+        summary: "Steel-based items for pipelines and industrial projects.",
+        bullets: [
+          "Line pipe, butt-weld fittings, flanges, gaskets, and bolting sets.",
+          "Structural steel and plate for industrial projects.",
+        ],
+      },
+      {
+        overline: "Power & electrification",
+        tag: "Power",
+        summary: "Distribution equipment for industrial loads.",
+        bullets: [
+          "Switchgear, switchboards, and motor control centers for industrial loads.",
+          "Power and control cables with accessories and terminations.",
+        ],
+      },
+    ],
+    whyOverline: "Why Miramar",
+    whyTitle: "Why Miramar for institutional projects",
+    whyBody:
+      "Built for clients that need specification alignment, documentation discipline, and reliable delivery.",
+    whyCards: [
+      {
+        title: "Technical compliance",
+        body: "API / ISO / IEC-aligned products and documentation where required.",
+      },
+      {
+        title: "Documentation quality",
+        body:
+          "Manufacturer data books, test certificates, EN 10204 MTCs, and QA/QC packs prepared for client handover.",
+      },
+      {
+        title: "Transparent supply chain",
+        body: "Traceability from mill or OEM to site, with clear documentation at each step.",
+      },
+      {
+        title: "On-time delivery",
+        body: "Planning around project schedules, inspection windows, and site constraints.",
+      },
+    ],
+    hseTitle: "HSE & compliance",
+    hseBody:
+      "Miramar aligns equipment selection and documentation with client HSE and QA/QC frameworks. Where required, we coordinate third-party inspection (DNV, SGS, TÜV or equivalent) and deliver the associated test reports and certificates as part of the project handover package.",
   },
 } as const;
 
 export default function Home() {
   const { lang } = useLanguage();
-  const c = HERO_COPY[lang];
+  const c = HOME_COPY[lang];
 
   return (
     <div className="text-slate-50">
@@ -50,6 +243,9 @@ export default function Home() {
                 {c.title}
               </h1>
               <p className="max-w-2xl text-sm text-slate-200/90 sm:text-base">
+                {c.positioning}
+              </p>
+              <p className="max-w-3xl text-sm text-slate-200/90 sm:text-base">
                 {c.body}
               </p>
               <div className="flex flex-wrap gap-3">
@@ -66,25 +262,23 @@ export default function Home() {
                   {c.secondaryCta}
                 </Link>
               </div>
-              <div className="mt-10 grid gap-4 text-xs sm:grid-cols-3">
-                <AnimatedCard className="h-full flex flex-col justify-center border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Focus</p>
-                  <p className="mt-1 font-semibold text-slate-100">
-                    Oil &amp; gas, power, heavy industry
-                  </p>
-                </AnimatedCard>
-                <AnimatedCard className="h-full flex flex-col justify-center border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Clients</p>
-                  <p className="mt-1 font-semibold text-slate-100">
-                    Private industrial groups &amp; EPCs
-                  </p>
-                </AnimatedCard>
-                <AnimatedCard className="h-full flex flex-col justify-center border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Deliverables</p>
-                  <p className="mt-1 font-semibold text-slate-100">
-                    Heavy equipment supply with basic manufacturer documentation on request
-                  </p>
-                </AnimatedCard>
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {c.focusBlocks.map((item, idx) => (
+                  <AnimatedCard
+                    key={item.label}
+                    className="h-full min-h-[150px] border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm"
+                  >
+                    <div className="flex items-center justify-between">
+                      <p className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                        {item.label}
+                      </p>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full border border-slate-700/80 bg-slate-900/70 text-[11px] font-semibold text-slate-200">
+                        {idx + 1}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm font-semibold text-slate-100">{item.value}</p>
+                  </AnimatedCard>
+                ))}
               </div>
             </div>
 
@@ -95,118 +289,53 @@ export default function Home() {
                   alt="Miramar industrial 3D visual"
                   width={1024}
                   height={540}
-                  className="w-full max-h-80 rounded-3xl object-cover"
-                  containerClassName="w-full"
+                  className="w-full rounded-3xl object-cover"
+                  containerClassName="w-full aspect-[16/9]"
                   priority
                 />
               </AnimatedCard>
               <div className="space-y-4">
-                <AnimatedCard className="h-full p-5 sm:p-6">
-                  <div className="flex items-center justify-between">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
-                      Oil &amp; gas mechanical equipment
+                {c.featureStacks.map((feature) => (
+                  <AnimatedCard key={feature.overline} className="h-full p-5 sm:p-6">
+                    <div className="flex items-center justify-between">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
+                        {feature.overline}
+                      </p>
+                      <span className="rounded-full bg-[#F6D365] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-900">
+                        {feature.tag}
+                      </span>
+                    </div>
+                    <p className="mt-3 text-sm font-semibold text-white">
+                      {feature.summary}
                     </p>
-                    <span className="h-2 w-2 rounded-full bg-[#B8202A]" />
-                  </div>
-                  <p className="mt-3 text-sm font-semibold text-white">
-                    API/ISO rotating equipment and valves for energy service.
-                  </p>
-                  <ul className="mt-3 space-y-1.5 text-xs text-slate-200/90">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#B8202A]" />
-                      API/ISO pumps, compressors, and turbines for upstream and midstream services.
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#B8202A]" />
-                      Gate, ball, and control valves sized to pressure class, media, and service.
-                    </li>
-                  </ul>
-                </AnimatedCard>
-
-                <AnimatedCard className="h-full p-5 sm:p-6">
-                  <div className="flex items-center justify-between">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
-                      Steel &amp; piping
-                    </p>
-                    <span className="rounded-full bg-[#F6D365] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-900">
-                      Mills
-                    </span>
-                  </div>
-                  <p className="mt-3 text-sm font-semibold text-white">
-                    Steel-based items for pipelines and industrial projects.
-                  </p>
-                  <ul className="mt-2 space-y-1.5 text-xs text-slate-200/90">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#B8202A]" />
-                      Line pipe, butt-weld fittings, and flanges for oil, gas, and process lines.
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#B8202A]" />
-                      Structural steel and plate for industrial projects.
-                    </li>
-                  </ul>
-                </AnimatedCard>
-
-                <AnimatedCard className="h-full p-5 sm:p-6">
-                  <div className="flex items-center justify-between">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300">
-                      Power &amp; electrification
-                    </p>
-                    <span className="h-2.5 w-2.5 rounded-full bg-[#B8202A]/80 shadow-lg shadow-[#B8202A]/40" />
-                  </div>
-                  <p className="mt-3 text-sm font-semibold text-white">
-                    Distribution equipment for industrial loads.
-                  </p>
-                  <ul className="mt-2 space-y-1.5 text-xs text-slate-200/90">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#B8202A]" />
-                      Switchgear, switchboards, and motor control centers for industrial loads.
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#B8202A]" />
-                      Power and control cables with accessories for plant distribution.
-                    </li>
-                  </ul>
-                </AnimatedCard>
+                    <ul className="mt-2 space-y-1.5 text-xs text-slate-200/90">
+                      {feature.bullets.map((bullet) => (
+                        <li key={bullet} className="flex items-start gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#B8202A]" />
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  </AnimatedCard>
+                ))}
               </div>
             </div>
           </div>
         </section>
       </section>
 
-      <section className="bg-transparent">
+      <section className="border-b border-slate-900/60 bg-slate-950/40">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
           <div className="max-w-3xl space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">Overview</p>
-            <h2 className="text-2xl font-semibold sm:text-3xl">Miramar at a glance</h2>
-            <p className="text-sm text-slate-300 sm:text-base">
-              Istanbul-based supplier serving oil &amp; gas, power, and heavy industry with heavy equipment from vetted mills and OEMs.
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">
+              {c.overviewOverline}
             </p>
+            <h2 className="text-2xl font-semibold sm:text-3xl">{c.overviewTitle}</h2>
+            <p className="text-sm text-slate-300 sm:text-base">{c.overviewBody}</p>
           </div>
 
           <div className="mt-8 grid gap-8 md:grid-cols-2">
-            {[
-              {
-                title: "About Miramar",
-                body: "Regional supplier for private oil &amp; gas, power, and industrial companies.",
-                href: "/about",
-              },
-              {
-                title: "Services",
-                body: "Equipment definition and supply, basic documentation support on request, and lifecycle replacement support.",
-                href: "/services",
-              },
-              {
-                title: "Sectors",
-                body: "Upstream, midstream, power generation, and industrial plants.",
-                href: "/sectors",
-              },
-              {
-                title: "Equipment",
-                body: "Oil &amp; gas rotating and valves, steel and piping, and electrical power equipment with vetted partners.",
-                href: "/equipment",
-              },
-            ].map((item) => (
+            {c.overviewCards.map((item) => (
               <AnimatedCard key={item.title} className="h-full">
                 <Link
                   href={item.href}
@@ -215,7 +344,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                     <span className="inline-flex items-center gap-1 text-sm text-[#F6D365] transition group-hover:translate-x-1">
-                      <span>Learn more</span>
+                      <span>{c.learnMore}</span>
                       <span aria-hidden="true">-&gt;</span>
                     </span>
                   </div>
@@ -226,8 +355,43 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="border-b border-slate-900/60 bg-slate-900/40">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+          <div className="max-w-3xl space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-300">
+              {c.whyOverline}
+            </p>
+            <h2 className="text-2xl font-semibold sm:text-3xl">{c.whyTitle}</h2>
+            <p className="text-sm text-slate-300 sm:text-base">{c.whyBody}</p>
+          </div>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+            {c.whyCards.map((item) => (
+              <AnimatedCard key={item.title} className="h-full p-5">
+                <p className="text-sm font-semibold text-white">{item.title}</p>
+                <p className="mt-2 text-sm text-slate-200">{item.body}</p>
+              </AnimatedCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-950/60">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+          <AnimatedCard className="p-6 sm:p-8 border border-slate-800/70 bg-slate-900/70">
+            <div className="grid gap-4 md:grid-cols-[auto_1fr] md:items-start">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-sm font-semibold text-white">
+                HSE
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-white">{c.hseTitle}</h3>
+                <p className="text-sm text-slate-200">{c.hseBody}</p>
+              </div>
+            </div>
+          </AnimatedCard>
+        </div>
+      </section>
     </div>
   );
 }
-
-

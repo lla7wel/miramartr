@@ -1,32 +1,58 @@
-﻿'use client';
+'use client';
 
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
 import AnimatedCard from "../../components/AnimatedCard";
-
-const ADDRESS = "\u0130\u00c7 KAPI, Cumhuriyet, Ergenekon Cd. AHMETBEY PLAZA , 34380 \u015ei\u015fli/\u0130stanbul, T\u00fcrkiye";
-const MAP_LINK = "https://www.google.com/maps/place/%C4%B0%C3%87+KAPI,+Cumhuriyet,+Ergenekon+Cd.+AHMETBEY+PLAZA+,+34380+%C5%9Ei%C5%9Fli/%C4%B0stanbul,+T%C3%BCrkiye";
+import { MAP_LINK, REGISTERED_ADDRESS, CORE_POSITIONING } from "../../lib/constants";
 
 const CONTACT_COPY = {
   en: {
     badge: "Contact",
     heading: "Share your RFQ or equipment list.",
+    positioning: CORE_POSITIONING.en,
     lead:
-      "Miramar responds to enquiries from regional private oil & gas, power, and industrial companies. Share your scope and key equipment items and we'll respond with suitable options from vetted mills and OEMs.",
+      "Miramar responds to enquiries from regional private oil & gas, power, and industrial companies. Share your scope and key equipment items and we'll respond with options from vetted mills and OEMs.",
+    reasonsLabel: "What we typically receive",
     reasons: [
       "Project RFQs for oil & gas, power, or industrial plants.",
       "Equipment lists covering line pipe, steel, valves, rotating, and electrical items.",
     ],
+    formLabels: {
+      name: "Name",
+      email: "Email",
+      company: "Company",
+      message: "Message",
+      messagePlaceholder: "Scope, timelines, and key equipment families.",
+      submit: "Submit enquiry",
+    },
+    formNote:
+      "This form is for companies seeking heavy equipment for energy and industrial projects. A backend connection can be added later.",
+    officeLabel: "Registered office",
+    mapCta: "Open in Maps",
   },
   tr: {
-    badge: "Iletisim",
-    heading: "Teklif veya ekipman listenizi paylasin.",
+    badge: "Contact",
+    heading: "Share your RFQ or equipment list.",
+    positioning: CORE_POSITIONING.tr,
     lead:
-      "Miramar, bolgesel ozel petrol ve gaz, enerji ve sanayi sirketlerinden gelen taleplere yanit verir. Kapsami ve ana ekipman kalemlerini paylasin; onayli haddehane ve OEM secenekleriyle donus yapalim.",
+      "Miramar responds to enquiries from regional private oil & gas, power, and industrial companies. Share your scope and key equipment items and we'll respond with options from vetted mills and OEMs.",
+    reasonsLabel: "What we typically receive",
     reasons: [
-      "Petrol & gaz, enerji veya endustriyel tesis projeleri icin paketler.",
-      "Boru hatti, celik, vana, doner ekipman ve elektrik kalemlerini iceren listeler.",
+      "Project RFQs for oil & gas, power, or industrial plants.",
+      "Equipment lists covering line pipe, steel, valves, rotating, and electrical items.",
     ],
+    formLabels: {
+      name: "Name",
+      email: "Email",
+      company: "Company",
+      message: "Message",
+      messagePlaceholder: "Scope, timelines, and key equipment families.",
+      submit: "Submit enquiry",
+    },
+    formNote:
+      "This form is for companies seeking heavy equipment for energy and industrial projects. A backend connection can be added later.",
+    officeLabel: "Registered office",
+    mapCta: "Open in Maps",
   },
 } as const;
 
@@ -43,14 +69,13 @@ export default function ContactPage() {
               {t.badge}
             </p>
             <h1 className="text-3xl font-semibold sm:text-4xl">{t.heading}</h1>
+            <p className="text-sm text-slate-200 sm:text-base">{t.positioning}</p>
             <p className="text-sm text-slate-200 sm:text-base">{t.lead}</p>
           </div>
 
           <AnimatedCard className="p-4 sm:p-5">
             <div className="space-y-1">
-              <p className="text-sm font-semibold text-white">
-                {lang === "tr" ? "Sik gelen talepler" : "What we typically receive"}
-              </p>
+              <p className="text-sm font-semibold text-white">{t.reasonsLabel}</p>
               <ul className="space-y-1.5 text-sm text-slate-200">
                 {t.reasons.map((item) => (
                   <li key={item} className="flex gap-2">
@@ -67,7 +92,7 @@ export default function ContactPage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label htmlFor="name" className="text-xs font-medium text-slate-200">
-                    Name
+                    {t.formLabels.name}
                   </label>
                   <input
                     id="name"
@@ -78,7 +103,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label htmlFor="email" className="text-xs font-medium text-slate-200">
-                    Email
+                    {t.formLabels.email}
                   </label>
                   <input
                     id="email"
@@ -92,7 +117,7 @@ export default function ContactPage() {
 
               <div>
                 <label htmlFor="company" className="text-xs font-medium text-slate-200">
-                  Company
+                  {t.formLabels.company}
                 </label>
                 <input
                   id="company"
@@ -104,14 +129,14 @@ export default function ContactPage() {
 
               <div>
                 <label htmlFor="message" className="text-xs font-medium text-slate-200">
-                  Message
+                  {t.formLabels.message}
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
                   className="mt-1 block w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-50 outline-none ring-0 transition focus:border-[#B8202A] focus:ring-1 focus:ring-[#B8202A]"
-                  placeholder="Scope, timelines, and key equipment families."
+                  placeholder={t.formLabels.messagePlaceholder}
                 />
               </div>
 
@@ -119,12 +144,10 @@ export default function ContactPage() {
                 type="submit"
                 className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#B8202A] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-[#B8202A]/40 transition hover:bg-[#9c1b24]"
               >
-                Submit enquiry
+                {t.formLabels.submit}
               </button>
 
-              <p className="pt-2 text-[10px] text-slate-400">
-                This form is for companies seeking heavy equipment for energy and industrial projects. A backend connection can be added later.
-              </p>
+              <p className="pt-2 text-[10px] text-slate-400">{t.formNote}</p>
             </form>
           </AnimatedCard>
         </div>
@@ -146,8 +169,10 @@ export default function ContactPage() {
 
       <div className="mt-10 grid gap-3 rounded-2xl border border-slate-800 bg-slate-900/80 p-5 text-sm text-slate-200 shadow-lg shadow-black/40 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-6">
         <div className="space-y-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">Head office</p>
-          <p>{ADDRESS}</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
+            {t.officeLabel}
+          </p>
+          <p>{REGISTERED_ADDRESS}</p>
         </div>
         <a
           href={MAP_LINK}
@@ -155,7 +180,7 @@ export default function ContactPage() {
           rel="noreferrer"
           className="inline-flex items-center justify-center rounded-full bg-slate-800 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-100 shadow hover:bg-slate-700"
         >
-          Open in Maps
+          {t.mapCta}
         </a>
       </div>
     </div>

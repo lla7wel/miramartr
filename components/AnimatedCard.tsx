@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 
 type AnimatedCardProps = PropsWithChildren<{
   className?: string;
@@ -12,16 +12,26 @@ const BASE_CLASSES =
 
 export default function AnimatedCard({ children, className }: AnimatedCardProps) {
   const classes = [BASE_CLASSES, className].filter(Boolean).join(" ");
+  const [canHover, setCanHover] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mediaQuery = window.matchMedia("(hover: hover)");
+    const update = () => setCanHover(mediaQuery.matches);
+    update();
+    mediaQuery.addEventListener("change", update);
+    return () => mediaQuery.removeEventListener("change", update);
+  }, []);
 
   return (
     <motion.div
       className={classes}
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      whileHover={{ y: -6, scale: 1.02, rotateX: -1.5, rotateY: 1.5 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.25, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.18 }}
+      whileHover={canHover ? { y: -4, scale: 1.01 } : undefined}
+      whileTap={canHover ? { scale: 0.995 } : undefined}
+      transition={{ duration: 0.4, ease: "easeOut" }}
     >
       {children}
     </motion.div>

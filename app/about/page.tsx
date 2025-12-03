@@ -1,44 +1,77 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
 import AnimatedCard from "../../components/AnimatedCard";
+import { CORE_POSITIONING, REGISTERED_ADDRESS } from "../../lib/constants";
 
 const ABOUT_COPY = {
   en: {
     badge: "About Miramar",
-    heading: "Istanbul-based energy and industrial equipment partner.",
-    lead1:
-      "Miramar is a mid-size regional supplier focused on oil & gas, power, and heavy industry. We serve regional private oil & gas, power, and industrial companies that require spec-compliant equipment and clear communication.",
+    heading: "Istanbul-based institutional partner.",
+    positioning: CORE_POSITIONING.en,
+    lead:
+      "Miramar is an Istanbul-based trading and marketing company supplying heavy equipment for oil & gas, power, and industrial projects. We operate with QA/QC discipline, documentation clarity, and schedule awareness.",
     lead2:
-      "From Istanbul, we source heavy industrial equipment from vetted mills and OEMs for oil, gas, power, and industrial projects.",
-    section1Title: "How we think",
-    section1Body:
-      "Equipment is risk, uptime, and reputation. We plan every package as if it will be audited.",
-    section2Title: "What we prioritize",
-    section2Body:
-      "Safety, technical compliance, documentation quality, and delivery under real project constraints.",
-    section3Title: "Who we serve",
-    section3Body:
-      "Private industrial groups, EPCs, and energy companies managing long-life assets.",
+      "Packages are assembled with vetted mills and OEMs, with traceability, inspection coordination, and handover documentation aligned to client frameworks.",
+    principles: [
+      { title: "How we think", body: "Equipment is risk, uptime, and reputation. We plan every package as if it will be audited." },
+      {
+        title: "What we prioritize",
+        body:
+          "Safety, technical compliance, documentation quality, and delivery under real project constraints.",
+      },
+      { title: "Who we serve", body: "Private industrial groups, EPCs, and energy companies managing long-life assets." },
+    ],
+    secondaryCards: [
+      {
+        title: "Regional reach, clear communication",
+        body:
+          "Serving Türkiye and the wider region with bilingual communication and direct coordination with engineering and procurement teams.",
+      },
+      {
+        title: "Transparent, traceable supply",
+        body:
+          "Equipment is sourced from vetted mills and OEMs. Manufacturer documentation, test certificates, and QA/QC packs are coordinated when required.",
+      },
+    ],
+    addressLabel: "Registered office",
+    servicesCta: "Explore services",
+    equipmentCta: "See equipment coverage",
   },
   tr: {
-    badge: "Miramar Hakkında",
-    heading: "İstanbul merkezli enerji ve endüstriyel ekipman ortağı.",
-    lead1:
-      "Miramar, petrol ve gaz, enerji ve ağır sanayi odaklı bölgesel bir tedarikçidir. Bölgedeki özel petrol ve gaz, enerji ve endüstri şirketlerine şartnameye uygun ekipman ve net iletişim sunar.",
+    badge: "About Miramar",
+    heading: "Istanbul-based institutional partner.",
+    positioning: CORE_POSITIONING.tr,
+    lead:
+      "Miramar is an Istanbul-based trading and marketing company supplying heavy equipment for oil & gas, power, and industrial projects. We operate with QA/QC discipline, documentation clarity, and schedule awareness.",
     lead2:
-      "İstanbul'dan, petrol, gaz, enerji ve endüstriyel projeler için onaylı haddehane ve OEM'lerden ağır ekipman tedarik ediyoruz.",
-    section1Title: "Nasıl düşünürüz",
-    section1Body:
-      "Ekipman; risk, duruş süresi ve itibar demektir. Her paketi denetleniyormuş gibi planlarız.",
-    section2Title: "Neye öncelik veririz",
-    section2Body:
-      "Güvenlik, teknik uygunluk, dokümantasyon kalitesi ve gerçek proje kısıtlarında teslimat.",
-    section3Title: "Kime hizmet veririz",
-    section3Body:
-      "Özel sanayi grupları, EPC'ler ve uzun ömürlü varlıkları yöneten enerji şirketleri.",
+      "Packages are assembled with vetted mills and OEMs, with traceability, inspection coordination, and handover documentation aligned to client frameworks.",
+    principles: [
+      { title: "How we think", body: "Equipment is risk, uptime, and reputation. We plan every package as if it will be audited." },
+      {
+        title: "What we prioritize",
+        body:
+          "Safety, technical compliance, documentation quality, and delivery under real project constraints.",
+      },
+      { title: "Who we serve", body: "Private industrial groups, EPCs, and energy companies managing long-life assets." },
+    ],
+    secondaryCards: [
+      {
+        title: "Regional reach, clear communication",
+        body:
+          "Serving Türkiye and the wider region with bilingual communication and direct coordination with engineering and procurement teams.",
+      },
+      {
+        title: "Transparent, traceable supply",
+        body:
+          "Equipment is sourced from vetted mills and OEMs. Manufacturer documentation, test certificates, and QA/QC packs are coordinated when required.",
+      },
+    ],
+    addressLabel: "Registered office",
+    servicesCta: "Explore services",
+    equipmentCta: "See equipment coverage",
   },
 } as const;
 
@@ -54,7 +87,8 @@ export default function AboutPage() {
             {t.badge}
           </p>
           <h1 className="text-3xl font-semibold sm:text-4xl">{t.heading}</h1>
-          <p className="text-sm text-slate-200 sm:text-base">{t.lead1}</p>
+          <p className="text-sm text-slate-200 sm:text-base">{t.positioning}</p>
+          <p className="text-sm text-slate-200 sm:text-base">{t.lead}</p>
           <p className="text-sm text-slate-200 sm:text-base">{t.lead2}</p>
         </div>
         <AnimatedCard className="h-full flex items-center justify-center p-1">
@@ -63,19 +97,15 @@ export default function AboutPage() {
             alt="Miramar overview"
             width={480}
             height={320}
-            className="w-full max-h-96 rounded-3xl object-cover"
-            containerClassName="w-full"
+            className="w-full rounded-3xl object-cover"
+            containerClassName="w-full aspect-[4/3]"
             priority
           />
         </AnimatedCard>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
-        {[
-          { title: t.section1Title, body: t.section1Body },
-          { title: t.section2Title, body: t.section2Body },
-          { title: t.section3Title, body: t.section3Body },
-        ].map((item) => (
+        {t.principles.map((item) => (
           <AnimatedCard key={item.title} className="h-full p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
               {item.title}
@@ -86,33 +116,35 @@ export default function AboutPage() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <AnimatedCard className="h-full p-6">
-          <h2 className="text-lg font-semibold text-white">Regional reach, clear communication</h2>
-          <p className="mt-3 text-sm text-slate-200">
-            Miramar supports projects in Turkey and nearby regional markets. We work with engineering and procurement teams that need reliable heavy equipment and clear communication without unnecessary complexity.
-          </p>
-        </AnimatedCard>
-        <AnimatedCard className="h-full p-6">
-          <h2 className="text-lg font-semibold text-white">Transparent, traceable supply</h2>
-          <p className="mt-3 text-sm text-slate-200">
-            Equipment is sourced from vetted mills and OEMs. When available, manufacturer certificates and basic test reports can be provided with deliveries.
-          </p>
-        </AnimatedCard>
+        {t.secondaryCards.map((card) => (
+          <AnimatedCard key={card.title} className="h-full p-6">
+            <h2 className="text-lg font-semibold text-white">{card.title}</h2>
+            <p className="mt-3 text-sm text-slate-200">{card.body}</p>
+          </AnimatedCard>
+        ))}
       </div>
 
-      <div className="flex flex-wrap gap-3 text-sm text-slate-200">
-        <Link
-          href="/services"
-          className="rounded-full border border-slate-700 bg-slate-900 px-4 py-2 font-semibold text-slate-100 transition hover:border-slate-500"
-        >
-          Explore services
-        </Link>
-        <Link
-          href="/equipment"
-          className="rounded-full border border-slate-700 bg-slate-900 px-4 py-2 font-semibold text-slate-100 transition hover:border-slate-500"
-        >
-          See equipment coverage
-        </Link>
+      <div className="grid gap-4 md:grid-cols-[2fr_1fr] md:items-center">
+        <div className="flex flex-wrap gap-3 text-sm text-slate-200">
+          <Link
+            href="/services"
+            className="rounded-full border border-slate-700 bg-slate-900 px-4 py-2 font-semibold text-slate-100 transition hover:border-slate-500"
+          >
+            {t.servicesCta}
+          </Link>
+          <Link
+            href="/equipment"
+            className="rounded-full border border-slate-700 bg-slate-900 px-4 py-2 font-semibold text-slate-100 transition hover:border-slate-500"
+          >
+            {t.equipmentCta}
+          </Link>
+        </div>
+        <AnimatedCard className="p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
+            {t.addressLabel}
+          </p>
+          <p className="mt-2 text-sm text-slate-200">{REGISTERED_ADDRESS}</p>
+        </AnimatedCard>
       </div>
     </div>
   );

@@ -17,6 +17,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const stored = typeof window !== "undefined" ? localStorage.getItem("miramar-lang") : null;
     if (stored === "en" || stored === "tr") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLangState(stored);
     }
   }, []);

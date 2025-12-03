@@ -12,6 +12,7 @@ export default function InteractiveImage({
   maxTilt = 6,
   containerClassName = "",
   className = "",
+  alt = "",
   ...props
 }: InteractiveImageProps) {
   const [transform, setTransform] = useState(
@@ -52,6 +53,7 @@ export default function InteractiveImage({
       >
         <Image
           {...props}
+          alt={alt}
           className={`h-full w-full object-cover ${className ?? ""}`}
         />
       </div>
