@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
 import {
-  COMPANY_PROFILE_PATH,
   CORE_POSITIONING,
   LEGAL_LINE,
   MAP_EMBED,
@@ -24,7 +23,6 @@ const FOOTER_COPY = {
       { label: "Contact", href: "/contact" },
     ],
     officeLabel: "Registered office",
-    profileCta: "Download company profile (PDF)",
     legal: LEGAL_LINE.en,
     disclaimer: SPEC_DISCLAIMER.en,
     contactCta: "Contact Miramar",
@@ -36,21 +34,20 @@ const FOOTER_COPY = {
   tr: {
     tagline: CORE_POSITIONING.tr,
     quickLinks: [
-      { label: "About", href: "/about" },
-      { label: "Services", href: "/services" },
-      { label: "Sectors", href: "/sectors" },
-      { label: "Equipment", href: "/equipment" },
-      { label: "Contact", href: "/contact" },
+      { label: "Hakkimizda", href: "/about" },
+      { label: "Hizmetler", href: "/services" },
+      { label: "Sektorler", href: "/sectors" },
+      { label: "Ekipman", href: "/equipment" },
+      { label: "Iletisim", href: "/contact" },
     ],
-    officeLabel: "Registered office",
-    profileCta: "Download company profile (PDF)",
+    officeLabel: "Kayitli ofis",
     legal: LEGAL_LINE.tr,
     disclaimer: SPEC_DISCLAIMER.tr,
-    contactCta: "Contact Miramar",
-    brandSubtitle: "Energy & Industrial Equipment",
-    quickLinksLabel: "Quick links",
-    mapCta: "Open in Maps",
-    builtFor: "Built for regional private energy & industrial companies.",
+    contactCta: "Miramar iletisim",
+    brandSubtitle: "Enerji ve Endustriyel Ekipman",
+    quickLinksLabel: "Hizli baglantilar",
+    mapCta: "Haritada ac",
+    builtFor: "Bolgedeki ozel enerji ve endustriyel sirketler icin.",
   },
 } as const;
 
@@ -96,15 +93,6 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  <Link
-                    href={COMPANY_PROFILE_PATH}
-                    target="_blank"
-                    rel="noreferrer"
-                    download
-                    className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-white/20"
-                  >
-                    {c.profileCta}
-                  </Link>
                   <Link
                     href="/contact"
                     className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-950 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-slate-600"

@@ -27,13 +27,13 @@ const HOME_COPY = {
     overviewOverline: "Overview",
     overviewTitle: "Miramar at a glance",
     overviewBody:
-      "Istanbul-based institutional supplier supporting oil & gas, power, and industrial projects with traceable heavy equipment from vetted mills and OEMs.",
+      "Istanbul-based trading and marketing company supplying heavy equipment for oil & gas, power, and industrial projects.",
     learnMore: "Learn more",
     overviewCards: [
       {
         title: "About Miramar",
         body:
-          "Institutional partner for private oil & gas, power, and industrial companies based in Istanbul.",
+          "Regional partner for private oil & gas, power, and industrial companies based in Istanbul.",
         href: "/about",
       },
       {
@@ -85,7 +85,7 @@ const HOME_COPY = {
       },
     ],
     whyOverline: "Why Miramar",
-    whyTitle: "Why Miramar for institutional projects",
+    whyTitle: "Why Miramar for project buyers",
     whyBody:
       "Built for clients that need specification alignment, documentation discipline, and reliable delivery.",
     whyCards: [
@@ -112,108 +112,102 @@ const HOME_COPY = {
       "Miramar aligns equipment selection and documentation with client HSE and QA/QC frameworks. Where required, we coordinate third-party inspection (DNV, SGS, TÜV or equivalent) and deliver the associated test reports and certificates as part of the project handover package.",
   },
   tr: {
-    badge: "Istanbul | Energy & Industrial Equipment",
-    title: "Project-ready supply for oil & gas, power, and heavy industry.",
+    badge: "Istanbul | Enerji ve Endustriyel Ekipman",
+    title: "Petrol, enerji ve agir sanayi icin proje hazir tedarik.",
     positioning: CORE_POSITIONING.tr,
     body:
-      "We plan equipment packages to client specifications, align documentation early, and coordinate with mills, OEMs, and inspectors to de-risk delivery for regional energy and industrial projects.",
-    primaryCta: "Share an RFQ / package list",
-    secondaryCta: "View equipment coverage",
+      "Ekipman paketlerini sartnameye gore planliyor, dokumantasyonu erken hizaliyor ve dogrulanmis ureticilerle teslimati dusuk riskle koordine ediyoruz.",
+    primaryCta: "Teklif / paket listesi gonder",
+    secondaryCta: "Ekipman kapsami",
     focusBlocks: [
-      { label: "Focus", value: "Energy, oil & gas, heavy industry" },
-      { label: "Clients", value: "Private industrial groups, EPCs, utilities" },
+      { label: "Odak", value: "Enerji, petrol ve gaz, agir sanayi" },
+      { label: "Musteriler", value: "Ozel sanayi gruplari, EPC'ler, hizmet saglayicilar" },
       {
-        label: "Deliverables",
-        value:
-          "Heavy equipment supply with manufacturer documentation and QA/QC packs when required.",
+        label: "Teslimatlar",
+        value: "Uretici dokumantasyonu ve QA/QC paketleriyle agir ekipman tedarigi.",
       },
     ],
-    overviewOverline: "Overview",
-    overviewTitle: "Miramar at a glance",
+    overviewOverline: "Genel Bakis",
+    overviewTitle: "Miramar ozet",
     overviewBody:
-      "Istanbul-based institutional supplier supporting oil & gas, power, and industrial projects with traceable heavy equipment from vetted mills and OEMs.",
-    learnMore: "Learn more",
+      "Istanbul merkezli, petrol ve gaz, enerji ve endustriyel projeler icin agir ekipman saglayan satis ve pazarlama sirketi.",
+    learnMore: "Incele",
     overviewCards: [
       {
-        title: "About Miramar",
-        body:
-          "Institutional partner for private oil & gas, power, and industrial companies based in Istanbul.",
+        title: "Miramar Hakkinda",
+        body: "Istanbul merkezli, petrol ve gaz, enerji ve endustriyel musterilere destek veren bolgesel tedarikci.",
         href: "/about",
       },
       {
-        title: "Services",
-        body:
-          "Equipment definition, documentation and QA/QC coordination, lifecycle and replacement support.",
+        title: "Hizmetler",
+        body: "Ekipman tanimi, dokumantasyon ve QA/QC koordinasyonu, yasam dongusu ve yedek destek.",
         href: "/services",
       },
       {
-        title: "Sectors",
-        body:
-          "Upstream, midstream, power generation, industrial plants, and infrastructure clients.",
+        title: "Sektorler",
+        body: "Upstream, midstream, enerji uretimi, endustriyel tesisler ve altyapi musterileri.",
         href: "/sectors",
       },
       {
-        title: "Equipment",
-        body:
-          "Rotating equipment, valves, piping and steel, and electrification packages aligned to client specs.",
+        title: "Ekipman",
+        body: "Doner ekipman, vanalar, borulama ve celik, elektrifikasyon paketleri; sartnameye uyumlu.",
         href: "/equipment",
       },
     ],
     featureStacks: [
       {
-        overline: "Oil & gas mechanical equipment",
+        overline: "Petrol ve gaz mekanik ekipman",
         tag: "API / ISO",
-        summary: "Spec-compliant rotating equipment and valves for energy service.",
+        summary: "Enerji hizmetine uygun doner ekipman ve vanalar.",
         bullets: [
-          "API/ISO pumps, compressors, and turbines sized for upstream and midstream services.",
-          "Gate, ball, control, and safety valves aligned to pressure class, media, and service.",
+          "Upstream ve midstream icin API/ISO pompalar, kompresorler ve turbinler.",
+          "Basinc sinifi ve hizmetine gore gate, ball, kontrol ve emniyet vanalari.",
         ],
       },
       {
-        overline: "Steel & piping",
+        overline: "Celik ve borulama",
         tag: "Mills",
-        summary: "Steel-based items for pipelines and industrial projects.",
+        summary: "Boru hatlari ve endustriyel projeler icin celik bazli urunler.",
         bullets: [
-          "Line pipe, butt-weld fittings, flanges, gaskets, and bolting sets.",
-          "Structural steel and plate for industrial projects.",
+          "Hat borulari, kaynakli dirsekler, flanslar, contalar ve civata setleri.",
+          "Endustriyel projeler icin yapisal celik ve sac.",
         ],
       },
       {
-        overline: "Power & electrification",
+        overline: "Guc ve elektrifikasyon",
         tag: "Power",
-        summary: "Distribution equipment for industrial loads.",
+        summary: "Endustriyel yukler icin dagitim ekipmanlari.",
         bullets: [
-          "Switchgear, switchboards, and motor control centers for industrial loads.",
-          "Power and control cables with accessories and terminations.",
+          "Endustriyel yukler icin switchgear, pano ve motor kontrol merkezleri.",
+          "Guc ve kontrol kablolari, sonlandirmalar ve aksesuarlar.",
         ],
       },
     ],
-    whyOverline: "Why Miramar",
-    whyTitle: "Why Miramar for institutional projects",
+    whyOverline: "Neden Miramar",
+    whyTitle: "Proje satin almacilari icin Miramar",
     whyBody:
-      "Built for clients that need specification alignment, documentation discipline, and reliable delivery.",
+      "Sartname uyumu, duzenli dokumantasyon ve guvenilir teslimat arayan musteriler icin tasarlandi.",
     whyCards: [
       {
-        title: "Technical compliance",
-        body: "API / ISO / IEC-aligned products and documentation where required.",
+        title: "Teknik uygunluk",
+        body: "Gerekli durumlarda API / ISO / IEC ile uyumlu urunler ve dokumantasyon.",
       },
       {
-        title: "Documentation quality",
-        body:
-          "Manufacturer data books, test certificates, EN 10204 MTCs, and QA/QC packs prepared for client handover.",
+        title: "Dokumantasyon kalitesi",
+        body: "Uretici data book'lari, test sertifikalari, EN 10204 MTC'ler ve teslim icin hazir QA/QC paketleri.",
       },
       {
-        title: "Transparent supply chain",
-        body: "Traceability from mill or OEM to site, with clear documentation at each step.",
+        title: "Seffaf tedarik zinciri",
+        body: "Her adimda acik dokumantasyonla haddehane veya OEM'den sahaya kadar izlenebilirlik.",
       },
       {
-        title: "On-time delivery",
-        body: "Planning around project schedules, inspection windows, and site constraints.",
+        title: "Zamaninda teslimat",
+        body: "Proje takvimine, muayene araliklarina ve saha kisitlarina gore planlama.",
       },
     ],
-    hseTitle: "HSE & compliance",
+    hseTitle: "HSE ve uygunluk",
     hseBody:
-      "Miramar aligns equipment selection and documentation with client HSE and QA/QC frameworks. Where required, we coordinate third-party inspection (DNV, SGS, TÜV or equivalent) and deliver the associated test reports and certificates as part of the project handover package.",
+      "Miramar, ekipman secimi ve dokumantasyonu musteri HSE ve QA/QC cerceveleriyle hizalar. Gerektiginde ucuncu taraf muayeneleri (DNV, SGS, TUV veya dengi) koordine edilir ve test raporlari ile sertifikalar teslim paketine dahil edilir.",
   },
 } as const;
 
@@ -266,6 +260,7 @@ export default function Home() {
                 {c.focusBlocks.map((item, idx) => (
                   <AnimatedCard
                     key={item.label}
+                    float
                     className="h-full min-h-[150px] border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm"
                   >
                     <div className="flex items-center justify-between">
@@ -395,3 +390,5 @@ export default function Home() {
     </div>
   );
 }
+
+

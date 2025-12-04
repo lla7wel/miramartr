@@ -1,5 +1,6 @@
 'use client';
 
+import { motion, useReducedMotion } from "framer-motion";
 import InteractiveImage from "../../components/InteractiveImage";
 import { useLanguage } from "../../components/LanguageProvider";
 import AnimatedCard from "../../components/AnimatedCard";
@@ -184,6 +185,8 @@ const EQUIPMENT_COPY = {
 export default function EquipmentPage() {
   const { lang } = useLanguage();
   const t = EQUIPMENT_COPY[lang];
+  const reduceMotion = useReducedMotion();
+  const familyOffsets = ["lg:-translate-y-3", "lg:translate-y-2", "lg:-translate-y-1"];
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 space-y-10 text-slate-50">
@@ -195,30 +198,60 @@ export default function EquipmentPage() {
         <p className="max-w-3xl text-sm text-slate-200 sm:text-base">{t.lead}</p>
       </div>
 
-      <section className="grid gap-8 lg:grid-cols-3">
-        {t.families.map((family) => (
-          <AnimatedCard key={family.name} className="flex h-full flex-col p-5">
-            <InteractiveImage
-              src={family.image}
-              alt={family.name}
-              width={400}
-              height={260}
-              className="w-full rounded-3xl object-cover"
-              containerClassName="mb-3 h-48 w-full"
-            />
-            <div className="flex flex-1 flex-col gap-3">
-              <h2 className="text-sm font-semibold text-white">{family.name}</h2>
-              <ul className="space-y-1.5 text-sm text-slate-200">
-                {family.bullets.map((bullet) => (
-                  <li key={bullet} className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </AnimatedCard>
-        ))}
+      <section className="relative">
+        <motion.div
+          className="pointer-events-none absolute inset-0 m-auto h-[640px] w-[640px] max-w-[90vw] rounded-full border border-white/5 blur-[0.5px]"
+          animate={
+            reduceMotion
+              ? undefined
+              : {
+                  rotate: [0, 360],
+                }
+          }
+          transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="pointer-events-none absolute inset-0 m-auto h-[520px] w-[520px] max-w-[80vw] rounded-full border border-[#B8202A]/25"
+          animate={
+            reduceMotion
+              ? undefined
+              : {
+                  rotate: [360, 0],
+                  x: [0, 6, -4, 0],
+                  y: [0, -6, 4, 0],
+                }
+          }
+          transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+        />
+        <div className="grid gap-8 lg:grid-cols-3">
+          {t.families.map((family, idx) => (
+            <AnimatedCard
+              key={family.name}
+              float
+              className={`flex h-full flex-col p-5 ${familyOffsets[idx % familyOffsets.length]}`}
+            >
+              <InteractiveImage
+                src={family.image}
+                alt={family.name}
+                width={400}
+                height={260}
+                className="w-full rounded-3xl object-cover"
+                containerClassName="mb-3 h-48 w-full"
+              />
+              <div className="flex flex-1 flex-col gap-3">
+                <h2 className="text-sm font-semibold text-white">{family.name}</h2>
+                <ul className="space-y-1.5 text-sm text-slate-200">
+                  {family.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-400" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimatedCard>
+          ))}
+        </div>
       </section>
 
       <section className="grid gap-6 md:grid-cols-2">
@@ -279,3 +312,5 @@ export default function EquipmentPage() {
     </div>
   );
 }
+
+

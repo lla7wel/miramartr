@@ -25,8 +25,6 @@ const CONTACT_COPY = {
       messagePlaceholder: "Scope, timelines, and key equipment families.",
       submit: "Submit enquiry",
     },
-    formNote:
-      "This form is for companies seeking heavy equipment for energy and industrial projects. A backend connection can be added later.",
     officeLabel: "Registered office",
     mapCta: "Open in Maps",
   },
@@ -49,8 +47,6 @@ const CONTACT_COPY = {
       messagePlaceholder: "Scope, timelines, and key equipment families.",
       submit: "Submit enquiry",
     },
-    formNote:
-      "This form is for companies seeking heavy equipment for energy and industrial projects. A backend connection can be added later.",
     officeLabel: "Registered office",
     mapCta: "Open in Maps",
   },
@@ -146,8 +142,6 @@ export default function ContactPage() {
               >
                 {t.formLabels.submit}
               </button>
-
-              <p className="pt-2 text-[10px] text-slate-400">{t.formNote}</p>
             </form>
           </AnimatedCard>
         </div>
@@ -186,3 +180,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

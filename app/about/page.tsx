@@ -9,7 +9,7 @@ import { CORE_POSITIONING, REGISTERED_ADDRESS } from "../../lib/constants";
 const ABOUT_COPY = {
   en: {
     badge: "About Miramar",
-    heading: "Istanbul-based institutional partner.",
+    heading: "Istanbul-based energy & industrial equipment supplier.",
     positioning: CORE_POSITIONING.en,
     lead:
       "Miramar is an Istanbul-based trading and marketing company supplying heavy equipment for oil & gas, power, and industrial projects. We operate with QA/QC discipline, documentation clarity, and schedule awareness.",
@@ -42,36 +42,33 @@ const ABOUT_COPY = {
   },
   tr: {
     badge: "About Miramar",
-    heading: "Istanbul-based institutional partner.",
+    heading: "Istanbul merkezli enerji ve endustriyel ekipman tedarikcisi.",
     positioning: CORE_POSITIONING.tr,
     lead:
-      "Miramar is an Istanbul-based trading and marketing company supplying heavy equipment for oil & gas, power, and industrial projects. We operate with QA/QC discipline, documentation clarity, and schedule awareness.",
+      "Miramar, petrol, enerji ve endustriyel projeler icin agir ekipman saglayan Istanbul merkezli bir ticaret ve pazarlama sirketidir. QA/QC disiplini, net dokumantasyon ve zaman farkindaligi ile calisiriz.",
     lead2:
-      "Packages are assembled with vetted mills and OEMs, with traceability, inspection coordination, and handover documentation aligned to client frameworks.",
+      "Paketler dogrulanmis haddehane ve OEM'lerle olusturulur; izlenebilirlik, muayene koordinasyonu ve teslim dokumantasyonu musteri cercevelerine gore duzenlenir.",
     principles: [
-      { title: "How we think", body: "Equipment is risk, uptime, and reputation. We plan every package as if it will be audited." },
+      { title: "Nasil dusunuruz", body: "Ekipman risk, durus ve itibardir. Her paketi denetleniyormus gibi planliyoruz." },
       {
-        title: "What we prioritize",
-        body:
-          "Safety, technical compliance, documentation quality, and delivery under real project constraints.",
+        title: "Neye oncelik veririz",
+        body: "Guvenlik, teknik uygunluk, dokumantasyon kalitesi ve gercek proje kisitlarinda teslimat.",
       },
-      { title: "Who we serve", body: "Private industrial groups, EPCs, and energy companies managing long-life assets." },
+      { title: "Kime hizmet veririz", body: "Ozel sanayi gruplari, EPC'ler ve uzun omurlu varliklari yoneten enerji sirketleri." },
     ],
     secondaryCards: [
       {
-        title: "Regional reach, clear communication",
-        body:
-          "Serving Türkiye and the wider region with bilingual communication and direct coordination with engineering and procurement teams.",
+        title: "Bolgesel erisim, acik iletisim",
+        body: "Turkiye ve yakin bolgelerde iki dilli iletisim ve dogrudan muhendislik/satin alma ekipleriyle koordinasyon.",
       },
       {
-        title: "Transparent, traceable supply",
-        body:
-          "Equipment is sourced from vetted mills and OEMs. Manufacturer documentation, test certificates, and QA/QC packs are coordinated when required.",
+        title: "Seffaf, izlenebilir tedarik",
+        body: "Ekipman dogrulanmis haddehane ve OEM'lerden saglanir. Gerektiginde uretici dokumantasyonu, test sertifikalari ve QA/QC paketleri koordine edilir.",
       },
     ],
-    addressLabel: "Registered office",
-    servicesCta: "Explore services",
-    equipmentCta: "See equipment coverage",
+    addressLabel: "Kayitli ofis",
+    servicesCta: "Hizmetleri kesfet",
+    equipmentCta: "Ekipman kapsamini gor",
   },
 } as const;
 
@@ -149,3 +146,6 @@ export default function AboutPage() {
     </div>
   );
 }
+
+
+
