@@ -8,83 +8,85 @@ import { CORE_POSITIONING } from "../../lib/constants";
 const SERVICES_COPY = {
   en: {
     badge: "Services",
-    heading: "From equipment definition to documented delivery.",
+    heading: "From BOQ to delivered materials and completed site scope.",
     positioning: CORE_POSITIONING.en,
     lead:
-      "Engage Miramar for specification-aligned sourcing and lifecycle support tailored to regional private oil & gas, power, and industrial companies.",
+      "Engage Miramar for construction material supply and coordinated site services covering electrical, plumbing, and pumping systems—delivered with schedule awareness and clear documentation.",
     pillars: [
       {
         tag: "Pillar I",
-        title: "Equipment definition & supply",
+        title: "Materials supply & procurement",
         bullets: [
-          "Oil & gas rotating equipment, valves, and process items classified to specification.",
-          "Steel, piping, flanges, fittings, and structural packages.",
-          "Electrical power: switchgear, switchboards, and motor control centers.",
-          "Power and control cables with accessories for plant distribution.",
+          "Structural and finishing materials aligned to project specifications.",
+          "Cable containment, conduits, trays, and accessories.",
+          "Pipes, fittings, valves, sanitary and drainage materials.",
+          "Delivery planning, staged shipments, and site coordination.",
         ],
         image: "/miramar-service-supply.png",
       },
       {
         tag: "Pillar II",
-        title: "Documentation and QA/QC",
+        title: "Electrical supply & installation",
         bullets: [
-          "Coordinate manufacturer data books, manuals, and available test reports.",
-          "Include manufacturer certificates, EN 10204 material certificates, and QA/QC packs when required.",
-          "Align documentation structure with client expectations for handover.",
+          "LV distribution: panels, breakers, protection, terminations.",
+          "Cabling, containment, grounding, and basic testing support.",
+          "Lighting materials and installation coordination (as scoped).",
+          "Documentation for installed systems (as required).",
         ],
-        image: "/miramar-service-logistics.png",
+        image: "/miramar-3d-power.png",
       },
       {
         tag: "Pillar III",
-        title: "Lifecycle & replacement support",
+        title: "Plumbing, pumps & site utilities",
         bullets: [
-          "Spares and replacement strategies for critical lines.",
-          "Equivalency checks when original models are obsolete.",
-          "Support for upgrades, brownfield modifications, and tie-ins.",
-          "Technical sourcing support to keep plants online.",
+          "Domestic water, drainage, and building plumbing materials.",
+          "Pump supply: booster, transfer, circulation, dewatering.",
+          "Installation coordination and commissioning support (as scoped).",
+          "Utility trenching coordination inputs (routes, quantities, sequencing).",
         ],
-        image: "/miramar-service-lifecycle.png",
+        image: "/miramar-3d-steel-piping.png",
       },
     ],
   },
   tr: {
-    badge: "Services",
-    heading: "From equipment definition to documented delivery.",
+    badge: "Hizmetler",
+    heading: "BOQ'dan teslim edilmis malzemelere ve tamamlanmis saha kapsamlarina.",
     positioning: CORE_POSITIONING.tr,
     lead:
-      "Engage Miramar for specification-aligned sourcing and lifecycle support tailored to regional private oil & gas, power, and industrial companies.",
+      "Miramar, insaat malzeme tedarigi ile elektrik, sihhi tesisat ve pompa sistemlerini kapsayan koordine saha hizmetlerini; takvime duyarlı ve net dokümantasyonla teslim eder.",
     pillars: [
       {
         tag: "Pillar I",
-        title: "Equipment definition & supply",
+        title: "Malzeme tedarigi ve satin alma",
         bullets: [
-          "Oil & gas rotating equipment, valves, and process items classified to specification.",
-          "Steel, piping, flanges, fittings, and structural packages.",
-          "Electrical power: switchgear, switchboards, and motor control centers.",
-          "Power and control cables with accessories for plant distribution.",
+          "Proje sartnamelerine uygun yapi ve ince is malzemeleri.",
+          "Kablo tavası, kanal, boru ve aksesuarlar.",
+          "Boru, baglanti elemanlari, vanalar, sıhhi ve drenaj malzemeleri.",
+          "Teslimat planlama, kademeli sevkiyat ve saha koordinasyonu.",
         ],
         image: "/miramar-service-supply.png",
       },
       {
         tag: "Pillar II",
-        title: "Documentation and QA/QC",
+        title: "Elektrik tedarigi ve montaj",
         bullets: [
-          "Coordinate manufacturer data books, manuals, and available test reports.",
-          "Include manufacturer certificates, EN 10204 material certificates, and QA/QC packs when required.",
-          "Align documentation structure with client expectations for handover.",
+          "LV dagitim: pano, kesici, koruma, sonlandirma.",
+          "Kablolama, kanal/tepsi, topraklama ve temel test destegi.",
+          "Aydinlatma malzemeleri ve kapsam dahilinde montaj koordinasyonu.",
+          "Gerekli durumlarda kurulu sistemler icin dokumantasyon.",
         ],
-        image: "/miramar-service-logistics.png",
+        image: "/miramar-3d-power.png",
       },
       {
         tag: "Pillar III",
-        title: "Lifecycle & replacement support",
+        title: "Sihhi tesisat, pompalar ve saha altyapilari",
         bullets: [
-          "Spares and replacement strategies for critical lines.",
-          "Equivalency checks when original models are obsolete.",
-          "Support for upgrades, brownfield modifications, and tie-ins.",
-          "Technical sourcing support to keep plants online.",
+          "Icme suyu, drenaj ve bina sihhi malzemeleri.",
+          "Pompa tedariği: hidrofor, transfer, sirkulasyon, dewatering.",
+          "Kapsama gore montaj koordinasyonu ve devreye alma destegi.",
+          "Hendek/altyapi koordinasyon girdileri (guzergah, metraj, sira).",
         ],
-        image: "/miramar-service-lifecycle.png",
+        image: "/miramar-3d-steel-piping.png",
       },
     ],
   },
@@ -112,7 +114,7 @@ export default function ServicesPage() {
               width={320}
               height={200}
               className="object-cover"
-              containerClassName="h-32 w-full rounded-2xl"
+              containerClassName="h-36 w-full rounded-2xl"
             />
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8202A]">
               {pillar.tag}
@@ -132,4 +134,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-

@@ -9,66 +9,103 @@ import { CORE_POSITIONING, REGISTERED_ADDRESS } from "../../lib/constants";
 const ABOUT_COPY = {
   en: {
     badge: "About Miramar",
-    heading: "Istanbul-based energy & industrial equipment supplier.",
+    heading: "Istanbul-based supplier and site services partner for construction projects.",
     positioning: CORE_POSITIONING.en,
     lead:
-      "Miramar is an Istanbul-based trading and marketing company supplying heavy equipment for oil & gas, power, and industrial projects. We operate with QA/QC discipline, documentation clarity, and schedule awareness.",
+      "Miramar supports construction and site development by supplying project materials and executing critical building services scopes—electrical, plumbing, and pump systems. We operate with practical coordination, clear communication, and a commitment to quality in both supply and on-site work.",
     lead2:
-      "Packages are assembled with vetted mills and OEMs, with traceability, inspection coordination, and handover documentation aligned to client frameworks.",
+      "Our approach is simple: define the scope early, confirm quantities and specifications, plan deliveries around site reality, and execute installations with discipline and safety.",
     principles: [
-      { title: "How we think", body: "Equipment is risk, uptime, and reputation. We plan every package as if it will be audited." },
+      {
+        title: "How we think",
+        body:
+          "Construction is schedule, sequencing, and accountability. We plan every package and site activity to reduce delays and rework.",
+      },
       {
         title: "What we prioritize",
-        body:
-          "Safety, technical compliance, documentation quality, and delivery under real project constraints.",
+        body: "Quality, documentation clarity, safe execution, and reliable delivery.",
       },
-      { title: "Who we serve", body: "Private industrial groups, EPCs, and energy companies managing long-life assets." },
+      {
+        title: "Who we serve",
+        body:
+          "Contractors, developers, facility owners, and project managers running residential, commercial, and infrastructure builds.",
+      },
+      {
+        title: "Regional reach",
+        body:
+          "Serving Turkiye and nearby markets with bilingual communication and direct coordination with procurement and site teams.",
+      },
+      {
+        title: "Transparent supply",
+        body:
+          "Sourcing from vetted manufacturers and distributors; substitutions are controlled, documented, and approved.",
+      },
     ],
     secondaryCards: [
       {
-        title: "Regional reach, clear communication",
+        title: "Schedule-aware delivery",
         body:
-          "Serving Türkiye and the wider region with bilingual communication and direct coordination with engineering and procurement teams.",
+          "Materials and site works planned around readiness, access, and milestones so crews stay productive.",
       },
       {
-        title: "Transparent, traceable supply",
+        title: "Documentation discipline",
         body:
-          "Equipment is sourced from vetted mills and OEMs. Manufacturer documentation, test certificates, and QA/QC packs are coordinated when required.",
+          "Datasheets, certificates when applicable, and handover basics prepared to match project requirements.",
       },
     ],
     addressLabel: "Registered office",
     servicesCta: "Explore services",
-    equipmentCta: "See equipment coverage",
+    equipmentCta: "See coverage",
   },
   tr: {
-    badge: "About Miramar",
-    heading: "Istanbul merkezli enerji ve endustriyel ekipman tedarikcisi.",
+    badge: "Miramar Hakkinda",
+    heading: "Insaat projeleri icin tedarik ve saha hizmetleri ortaginiz.",
     positioning: CORE_POSITIONING.tr,
     lead:
-      "Miramar, petrol, enerji ve endustriyel projeler icin agir ekipman saglayan Istanbul merkezli bir ticaret ve pazarlama sirketidir. QA/QC disiplini, net dokumantasyon ve zaman farkindaligi ile calisiriz.",
+      "Miramar, insaat ve saha gelistirme projelerini; malzeme tedarigi ve elektrik, sihhi tesisat ile pompa sistemlerinin uygulama destegiyle destekler. Tedarikte ve sahada pratik koordinasyon, net iletisim ve kalite odakli calisiriz.",
     lead2:
-      "Paketler dogrulanmis haddehane ve OEM'lerle olusturulur; izlenebilirlik, muayene koordinasyonu ve teslim dokumantasyonu musteri cercevelerine gore duzenlenir.",
+      "Yaklasimimiz net: Kapsami erken belirlemek, metraj ve sartlari teyit etmek, teslimatlari saha gercekligine gore planlamak ve uygulamalari disiplin ve guvenlikle yürütmek.",
     principles: [
-      { title: "Nasil dusunuruz", body: "Ekipman risk, durus ve itibardir. Her paketi denetleniyormus gibi planliyoruz." },
       {
-        title: "Neye oncelik veririz",
-        body: "Guvenlik, teknik uygunluk, dokumantasyon kalitesi ve gercek proje kisitlarinda teslimat.",
+        title: "Nasil dusunuruz",
+        body:
+          "Insaat; takvim, sira ve sorumluluktur. Her paketi ve saha aktivitesini gecikme ve tekrar is azaltacak sekilde planliyoruz.",
       },
-      { title: "Kime hizmet veririz", body: "Ozel sanayi gruplari, EPC'ler ve uzun omurlu varliklari yoneten enerji sirketleri." },
+      {
+        title: "Onceliklerimiz",
+        body: "Kalite, net dokumantasyon, guvenli uygulama ve guvenilir teslimat.",
+      },
+      {
+        title: "Kime hizmet veririz",
+        body:
+          "Konut, ticari ve altyapi projelerini yürüten yukleniciler, gelistiriciler, isletme sahipleri ve proje mudurleri.",
+      },
+      {
+        title: "Bolgesel erisim",
+        body:
+          "Turkiye ve yakin pazarlara iki dilli iletisim ve satin alma/saha ekipleriyle dogrudan koordinasyonla hizmet.",
+      },
+      {
+        title: "Seffaf tedarik",
+        body:
+          "Dogrulanmis uretici ve distribütorler; alternatifler kontrollu, dokümante ve onayli.",
+      },
     ],
     secondaryCards: [
       {
-        title: "Bolgesel erisim, acik iletisim",
-        body: "Turkiye ve yakin bolgelerde iki dilli iletisim ve dogrudan muhendislik/satin alma ekipleriyle koordinasyon.",
+        title: "Takvime duyarlı teslim",
+        body:
+          "Malzemeler ve saha işleri, hazirlik, erisim ve kilometre taslarina gore planlanir; ekipler verimli kalir.",
       },
       {
-        title: "Seffaf, izlenebilir tedarik",
-        body: "Ekipman dogrulanmis haddehane ve OEM'lerden saglanir. Gerektiginde uretici dokumantasyonu, test sertifikalari ve QA/QC paketleri koordine edilir.",
+        title: "Dokumantasyon disiplini",
+        body:
+          "Gerekli oldugunda teknik dokumanlar, sertifikalar ve teslim evraklari proje sartlarina uygun sekilde hazirlanir.",
       },
     ],
     addressLabel: "Kayitli ofis",
     servicesCta: "Hizmetleri kesfet",
-    equipmentCta: "Ekipman kapsamini gor",
+    equipmentCta: "Kapsami gor",
   },
 } as const;
 
@@ -101,13 +138,13 @@ export default function AboutPage() {
         </AnimatedCard>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-5">
         {t.principles.map((item) => (
           <AnimatedCard key={item.title} className="h-full p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
               {item.title}
             </p>
-            <p className="mt-3 text-sm text-slate-200">{item.body}</p>
+            <p className="mt-3 text-sm text-slate-200 leading-relaxed">{item.body}</p>
           </AnimatedCard>
         ))}
       </div>
@@ -116,7 +153,7 @@ export default function AboutPage() {
         {t.secondaryCards.map((card) => (
           <AnimatedCard key={card.title} className="h-full p-6">
             <h2 className="text-lg font-semibold text-white">{card.title}</h2>
-            <p className="mt-3 text-sm text-slate-200">{card.body}</p>
+            <p className="mt-3 text-sm text-slate-200 leading-relaxed">{card.body}</p>
           </AnimatedCard>
         ))}
       </div>
@@ -146,6 +183,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-
-

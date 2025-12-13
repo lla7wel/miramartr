@@ -8,47 +8,55 @@ import { MAP_LINK, REGISTERED_ADDRESS, CORE_POSITIONING } from "../../lib/consta
 const CONTACT_COPY = {
   en: {
     badge: "Contact",
-    heading: "Share your RFQ or equipment list.",
+    heading: "Share your RFQ, BOQ, or scope.",
     positioning: CORE_POSITIONING.en,
     lead:
-      "Miramar responds to enquiries from regional private oil & gas, power, and industrial companies. Share your scope and key equipment items and we'll respond with options from vetted mills and OEMs.",
+      "Send your drawings, BOQ, timeline, and site location. Miramar will respond with availability, alternatives (if needed), and a delivery/installation plan aligned to your project schedule.",
     reasonsLabel: "What we typically receive",
     reasons: [
-      "Project RFQs for oil & gas, power, or industrial plants.",
-      "Equipment lists covering line pipe, steel, valves, rotating, and electrical items.",
+      "BOQs / material take-offs and project drawings",
+      "Electrical single-lines, layouts, and cable schedules",
+      "Plumbing schematics, risers, and fixture schedules",
+      "Pump duty points, flow/head requirements, and site conditions",
+      "Delivery phasing, access constraints, and required dates",
     ],
     formLabels: {
       name: "Name",
       email: "Email",
       company: "Company",
       message: "Message",
-      messagePlaceholder: "Scope, timelines, and key equipment families.",
+      messagePlaceholder: "Scope, timelines, delivery phasing, key systems.",
       submit: "Submit enquiry",
     },
     officeLabel: "Registered office",
     mapCta: "Open in Maps",
+    responseMicrocopy: "We typically respond within 1 business day.",
   },
   tr: {
-    badge: "Contact",
-    heading: "Share your RFQ or equipment list.",
+    badge: "Iletisim",
+    heading: "Teklif, metraj veya kapsam paylasin.",
     positioning: CORE_POSITIONING.tr,
     lead:
-      "Miramar responds to enquiries from regional private oil & gas, power, and industrial companies. Share your scope and key equipment items and we'll respond with options from vetted mills and OEMs.",
-    reasonsLabel: "What we typically receive",
+      "Cizimleriniz, BOQ, zamanlama ve saha konumunu paylasin. Miramar, uygunluk, gerekiyorsa alternatifler ve proje takviminize uygun teslim/uygulama planiyla yanit verir.",
+    reasonsLabel: "Genellikle aldigimiz bilgiler",
     reasons: [
-      "Project RFQs for oil & gas, power, or industrial plants.",
-      "Equipment lists covering line pipe, steel, valves, rotating, and electrical items.",
+      "BOQ / metrajlar ve proje cizimleri",
+      "Elektrik tek hatlar, yerlesimler ve kablo listeleri",
+      "Sihhi tesisat semalari, kolon ve armatür listeleri",
+      "Pompa debi/basınç gereklilikleri ve saha sartlari",
+      "Teslim fazlari, erisim kisitlari ve istenen tarihler",
     ],
     formLabels: {
-      name: "Name",
+      name: "Isim",
       email: "Email",
-      company: "Company",
-      message: "Message",
-      messagePlaceholder: "Scope, timelines, and key equipment families.",
-      submit: "Submit enquiry",
+      company: "Firma",
+      message: "Mesaj",
+      messagePlaceholder: "Kapsam, takvim, teslim fazlari, temel sistemler.",
+      submit: "Talep gonder",
     },
-    officeLabel: "Registered office",
-    mapCta: "Open in Maps",
+    officeLabel: "Kayitli ofis",
+    mapCta: "Haritada ac",
+    responseMicrocopy: "Genellikle 1 is gunu icinde yanitliyoruz.",
   },
 } as const;
 
@@ -66,11 +74,11 @@ export default function ContactPage() {
             </p>
             <h1 className="text-3xl font-semibold sm:text-4xl">{t.heading}</h1>
             <p className="text-sm text-slate-200 sm:text-base">{t.positioning}</p>
-            <p className="text-sm text-slate-200 sm:text-base">{t.lead}</p>
+            <p className="text-sm text-slate-200 sm:text-base leading-relaxed">{t.lead}</p>
           </div>
 
           <AnimatedCard className="p-4 sm:p-5">
-            <div className="space-y-1">
+            <div className="space-y-2">
               <p className="text-sm font-semibold text-white">{t.reasonsLabel}</p>
               <ul className="space-y-1.5 text-sm text-slate-200">
                 {t.reasons.map((item) => (
@@ -80,6 +88,7 @@ export default function ContactPage() {
                   </li>
                 ))}
               </ul>
+              <p className="text-xs text-slate-400">{t.responseMicrocopy}</p>
             </div>
           </AnimatedCard>
 
@@ -171,7 +180,7 @@ export default function ContactPage() {
         <a
           href={MAP_LINK}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-full bg-slate-800 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-100 shadow hover:bg-slate-700"
         >
           {t.mapCta}
@@ -180,4 +189,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

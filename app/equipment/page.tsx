@@ -7,176 +7,164 @@ import AnimatedCard from "../../components/AnimatedCard";
 
 const EQUIPMENT_COPY = {
   en: {
-    badge: "Equipment & partners",
-    heading: "Equipment families we support.",
+    badge: "Materials & systems coverage",
+    heading: "What we supply and support on construction projects.",
     lead:
-      "Miramar supplies heavy equipment across oil & gas, power, and heavy industry. Packages align to project specifications with manufacturer documentation and QA/QC deliverables coordinated as required.",
+      "Miramar supplies construction materials and supports complete site scopes for electrical, plumbing, and pump systems. Packages are aligned to project specifications with practical documentation and delivery coordination.",
     families: [
       {
-        name: "Oil & gas mechanical equipment",
-        image: "/miramar-3d-oil-gas.png",
+        name: "Construction materials",
+        image: "/miramar-service-logistics.png",
         bullets: [
-          "Rotating equipment: API 610 pumps, compressors, turbines.",
-          "Valves: gate, ball, control, safety, and choke valves.",
-          "Process equipment: exchangers, vessels, filters via qualified OEMs.",
-          "Metering, loading, and terminal equipment when required.",
+          "Structural materials and profiles (as specified).",
+          "Finishing materials and jobsite consumables.",
+          "Fixings, fasteners, accessories, and protective items.",
+          "Staged deliveries aligned to site sequence.",
         ],
       },
       {
-        name: "Steel, piping & fabricated items",
-        image: "/miramar-3d-steel-piping.png",
-        bullets: [
-          "Seamless and welded line pipe in carbon and alloy steel.",
-          "Butt-weld fittings, flanges, gaskets, and bolting sets.",
-          "Steel plate, sheet, and structural profiles.",
-          "Prefabricated spools and simple shop-fabricated items.",
-        ],
-      },
-      {
-        name: "Power & electrification",
+        name: "Electrical materials & systems",
         image: "/miramar-3d-power.png",
         bullets: [
-          "Switchgear and switchboards for industrial power distribution.",
-          "Motor control centers (MCCs), drives, and starters.",
-          "Power and control cables with terminations and accessories.",
-          "Bus ducts and panelboards for plant electrification.",
+          "LV panels, distribution boards, protection and accessories.",
+          "Cables, conduits, trays, terminations, and labeling.",
+          "Lighting materials and installation accessories.",
+          "Testing/commissioning support (as scoped).",
+        ],
+      },
+      {
+        name: "Plumbing, drainage & pumps",
+        image: "/miramar-3d-steel-piping.png",
+        bullets: [
+          "Pipes, fittings, valves, and sanitary components.",
+          "Drainage materials, chambers, and accessories.",
+          "Pumps: booster, transfer, circulation, dewatering.",
+          "Commissioning support and spares strategy (as scoped).",
         ],
       },
     ],
-    partnerRolesTitle: "Typical partner roles in a Miramar package",
+    partnerRolesTitle: "Typical partner roles",
     partnerSelectTitle: "How we choose and align partners",
     partnerRoles: [
-      "Steel mills and pipe manufacturers for line pipe and structures.",
-      "OEMs for rotating equipment, valves, electrical equipment.",
-      "Fabricators for spools, skids, and simple assemblies.",
+      "Manufacturers/distributors for building materials and MEP products.",
+      "Installation teams for electrical, plumbing, and pump systems.",
+      "Logistics providers for staged deliveries and site access timing.",
     ],
     partnerSelection: [
-      "Fit with required standards (API, ISO, IEC, and project specs).",
-      "Ability to meet project specifications and communicate clearly.",
-      "Experience in oil & gas, power, and critical infrastructure.",
-      "Clarity on roles between mills, OEMs, agents, and on-site teams.",
+      "Fit with project specifications and delivery requirements.",
+      "Consistent quality and availability.",
+      "Clear documentation and after-sales support.",
+      "Transparent roles between supplier, installer, and site management.",
     ],
-    catalogTitle: "Key equipment families by category",
+    catalogTitle: "Key families by category",
     catalogIntro:
-      "Structured view of the core categories we supply for energy, oil & gas, and heavy industrial projects.",
+      "Structured view of the core categories we cover for construction and site development scopes.",
     catalog: [
       {
-        title: "Rotating Equipment",
-        description: "API/ISO compliant rotating equipment for process and utility service.",
-        items: "API 610 pumps, compressors, blowers, gearboxes, turbines",
-        priority: "Critical",
+        title: "Construction Materials",
+        description: "Structural, finishing, consumables",
+        items: "Profiles, drywall, finishes, adhesives, fasteners, protection",
       },
       {
-        title: "Valves & Flow Control",
-        description: "Valves and actuators sized to pressure class, media, and control philosophy.",
-        items: "Gate, globe, ball, check valves, control valves, actuators",
+        title: "Electrical",
+        description: "LV distribution, cabling, containment, accessories",
+        items: "Panels, breakers, trays/conduits, cables, terminations, labeling",
       },
       {
-        title: "Static Equipment",
-        description: "Pressure-retaining equipment for midstream and plant applications.",
-        items: "Pressure vessels, tanks, heat exchangers, filters, strainers",
+        title: "Plumbing",
+        description: "Water/drainage materials, valves, sanitary",
+        items: "Pipes, fittings, valves, traps, drainage channels, fixtures",
       },
       {
-        title: "Instrumentation & Controls",
-        description: "Measurement and control devices tied to client DCS/PLC standards.",
-        items: "Transmitters, gauges, analyzers, control valves, metering skids",
+        title: "Pumps",
+        description: "Booster/transfer/circulation/dewatering packages",
+        items: "Hydrofor sets, transfer pumps, circulation pumps, drainage/dewatering",
       },
       {
-        title: "Electrical Power & Distribution",
-        description: "Power distribution equipment for industrial loads and utilities.",
-        items: "Transformers, switchgear, MCCs, drives, bus ducts, industrial cabling",
-      },
-      {
-        title: "Piping & Fittings",
-        description: "Piping components with material traceability and certification.",
-        items: "Pipes, flanges, fittings, gaskets, supports, bolting",
+        title: "Site Utilities Support",
+        description: "Trenching coordination inputs, drainage solutions",
+        items: "Routes, quantities, sequencing notes, chambers, sumps, gullies",
       },
     ],
   },
   tr: {
-    badge: "Equipment & partners",
-    heading: "Equipment families we support.",
+    badge: "Malzeme ve sistem kapsami",
+    heading: "Insaat projelerinde sagladigimiz ve destekledigimiz kapsam.",
     lead:
-      "Miramar supplies heavy equipment across oil & gas, power, and heavy industry. Packages align to project specifications with manufacturer documentation and QA/QC deliverables coordinated as required.",
+      "Miramar, insaat malzemeleri tedarik eder ve elektrik, sihhi tesisat ve pompa sistemleri icin tam saha kapsamlarini destekler. Paketler, pratik dokumantasyon ve teslimat koordinasyonu ile proje sartnamelerine gore hizalanir.",
     families: [
       {
-        name: "Oil & gas mechanical equipment",
-        image: "/miramar-3d-oil-gas.png",
+        name: "Insaat malzemeleri",
+        image: "/miramar-service-logistics.png",
         bullets: [
-          "Rotating equipment: API 610 pumps, compressors, turbines.",
-          "Valves: gate, ball, control, safety, and choke valves.",
-          "Process equipment: exchangers, vessels, filters via qualified OEMs.",
-          "Metering, loading, and terminal equipment when required.",
+          "Sartnameye gore yapi malzemeleri ve profiller.",
+          "Ince is malzemeleri ve saha sarf malzemeleri.",
+          "Baglanti elemanlari, aksesuarlari ve koruyucu kalemler.",
+          "Saha siralamasina gore kademeli teslimatlar.",
         ],
       },
       {
-        name: "Steel, piping & fabricated items",
-        image: "/miramar-3d-steel-piping.png",
-        bullets: [
-          "Seamless and welded line pipe in carbon and alloy steel.",
-          "Butt-weld fittings, flanges, gaskets, and bolting sets.",
-          "Steel plate, sheet, and structural profiles.",
-          "Prefabricated spools and simple shop-fabricated items.",
-        ],
-      },
-      {
-        name: "Power & electrification",
+        name: "Elektrik malzemeleri ve sistemleri",
         image: "/miramar-3d-power.png",
         bullets: [
-          "Switchgear and switchboards for industrial power distribution.",
-          "Motor control centers (MCCs), drives, and starters.",
-          "Power and control cables with terminations and accessories.",
-          "Bus ducts and panelboards for plant electrification.",
+          "LV panolar, dagitim tabloları, koruma ve aksesuarlar.",
+          "Kablo, boru/kanal, tava, sonlandirma ve etiketleme.",
+          "Aydinlatma malzemeleri ve montaj aksesuarları.",
+          "Kapsama gore test/devreye alma destegi.",
+        ],
+      },
+      {
+        name: "Sihhi tesisat, drenaj ve pompalar",
+        image: "/miramar-3d-steel-piping.png",
+        bullets: [
+          "Boru, fiting, vana ve vitrifiye/saniter elemanlar.",
+          "Drenaj malzemeleri, bacalar ve aksesuarlar.",
+          "Pompalar: hidrofor, transfer, sirkülasyon, dewatering.",
+          "Kapsama gore devreye alma ve yedek stratejisi destegi.",
         ],
       },
     ],
-    partnerRolesTitle: "Typical partner roles in a Miramar package",
-    partnerSelectTitle: "How we choose and align partners",
+    partnerRolesTitle: "Tipik is ortagi rolleri",
+    partnerSelectTitle: "Partnerleri nasil secer ve hizalariz",
     partnerRoles: [
-      "Steel mills and pipe manufacturers for line pipe and structures.",
-      "OEMs for rotating equipment, valves, electrical equipment.",
-      "Fabricators for spools, skids, and simple assemblies.",
+      "Insaat ve MEP urunleri icin uretici/distribütorler.",
+      "Elektrik, sihhi tesisat ve pompa sistemleri icin montaj ekipleri.",
+      "Kademeli teslimatlar ve saha erisimi icin lojistik saglayicilar.",
     ],
     partnerSelection: [
-      "Fit with required standards (API, ISO, IEC, and project specs).",
-      "Ability to meet project specifications and communicate clearly.",
-      "Experience in oil & gas, power, and critical infrastructure.",
-      "Clarity on roles between mills, OEMs, agents, and on-site teams.",
+      "Proje sartlari ve teslim gereklilikleri ile uyum.",
+      "Tutarlı kalite ve bulunabilirlik.",
+      "Net dokumantasyon ve satis sonrasi destek.",
+      "Tedarikci, uygulayici ve saha yonetimi arasinda seffaf roller.",
     ],
-    catalogTitle: "Key equipment families by category",
+    catalogTitle: "Kategori bazinda ana aileler",
     catalogIntro:
-      "Structured view of the core categories we supply for energy, oil & gas, and heavy industrial projects.",
+      "Insaat ve saha gelistirme kapsamlarinda sundugumuz temel kategorilerin duzenli görünümü.",
     catalog: [
       {
-        title: "Rotating Equipment",
-        description: "API/ISO compliant rotating equipment for process and utility service.",
-        items: "API 610 pumps, compressors, blowers, gearboxes, turbines",
-        priority: "Critical",
+        title: "Insaat Malzemeleri",
+        description: "Yapi, ince is, sarf malzemeleri",
+        items: "Profiller, alci-pan, finisajlar, yapistiricilar, baglanti elemanlari, koruma",
       },
       {
-        title: "Valves & Flow Control",
-        description: "Valves and actuators sized to pressure class, media, and control philosophy.",
-        items: "Gate, globe, ball, check valves, control valves, actuators",
+        title: "Elektrik",
+        description: "LV dagitim, kablolama, kanal/tepsi, aksesuarlar",
+        items: "Panolar, kesiciler, tava/kanal, kablolar, sonlandirma, etiketleme",
       },
       {
-        title: "Static Equipment",
-        description: "Pressure-retaining equipment for midstream and plant applications.",
-        items: "Pressure vessels, tanks, heat exchangers, filters, strainers",
+        title: "Sihhi Tesisat",
+        description: "Su/drenaj malzemeleri, vanalar, saniter",
+        items: "Boru, fiting, vana, sifonlar, drenaj kanallari, vitrifiye",
       },
       {
-        title: "Instrumentation & Controls",
-        description: "Measurement and control devices tied to client DCS/PLC standards.",
-        items: "Transmitters, gauges, analyzers, control valves, metering skids",
+        title: "Pompalar",
+        description: "Hidrofor/transfer/sirkülasyon/dewatering paketleri",
+        items: "Hidrofor setleri, transfer pompalar, sirkülasyon pompalar, drenaj/dewatering",
       },
       {
-        title: "Electrical Power & Distribution",
-        description: "Power distribution equipment for industrial loads and utilities.",
-        items: "Transformers, switchgear, MCCs, drives, bus ducts, industrial cabling",
-      },
-      {
-        title: "Piping & Fittings",
-        description: "Piping components with material traceability and certification.",
-        items: "Pipes, flanges, fittings, gaskets, supports, bolting",
+        title: "Saha Altyapi Destegi",
+        description: "Kazı koordinasyonu girdileri, drenaj cozumleri",
+        items: "Guzergah, metraj, sira notlari; bacalar, toplama kuyulari, mazgallar",
       },
     ],
   },
@@ -266,7 +254,7 @@ export default function EquipmentPage() {
             ))}
           </ul>
           <p className="pt-1 text-sm text-slate-200">
-            Our role is to source heavy equipment from vetted manufacturers and align deliveries with your technical specifications.
+            Our role is to source materials and systems from vetted partners and align deliveries with project requirements.
           </p>
         </div>
 
@@ -312,5 +300,3 @@ export default function EquipmentPage() {
     </div>
   );
 }
-
-

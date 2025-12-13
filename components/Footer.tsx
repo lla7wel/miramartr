@@ -26,10 +26,10 @@ const FOOTER_COPY = {
     legal: LEGAL_LINE.en,
     disclaimer: SPEC_DISCLAIMER.en,
     contactCta: "Contact Miramar",
-    brandSubtitle: "Energy & Industrial Equipment",
+    brandSubtitle: "Construction Materials & Site Services",
     quickLinksLabel: "Quick links",
     mapCta: "Open in Maps",
-    builtFor: "Built for regional private energy & industrial companies.",
+    builtFor: "Built for construction, electrical, and site development projects.",
   },
   tr: {
     tagline: CORE_POSITIONING.tr,
@@ -44,10 +44,10 @@ const FOOTER_COPY = {
     legal: LEGAL_LINE.tr,
     disclaimer: SPEC_DISCLAIMER.tr,
     contactCta: "Miramar iletisim",
-    brandSubtitle: "Enerji ve Endustriyel Ekipman",
+    brandSubtitle: "Insaat Malzemeleri ve Saha Hizmetleri",
     quickLinksLabel: "Hizli baglantilar",
     mapCta: "Haritada ac",
-    builtFor: "Bolgedeki ozel enerji ve endustriyel sirketler icin.",
+    builtFor: "Insaat, elektrik ve saha gelistirme projeleri icin.",
   },
 } as const;
 

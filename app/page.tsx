@@ -8,206 +8,234 @@ import { CORE_POSITIONING } from "../lib/constants";
 
 const HOME_COPY = {
   en: {
-    badge: "Istanbul | Energy & Industrial Equipment",
-    title: "Project-ready supply for oil & gas, power, and heavy industry.",
+    badge: "Istanbul | Construction Materials & Site Services",
+    title: "Project-ready supply and site services for modern construction.",
     positioning: CORE_POSITIONING.en,
     body:
-      "We plan equipment packages to client specifications, align documentation early, and coordinate with mills, OEMs, and inspectors to de-risk delivery for regional energy and industrial projects.",
-    primaryCta: "Share an RFQ / package list",
-    secondaryCta: "View equipment coverage",
+      "Miramar supplies construction materials and delivers on-site electrical, plumbing, and pump systems for residential, commercial, and infrastructure projects. We align scope early, coordinate procurement and delivery, and support installation to keep projects moving on schedule.",
+    primaryCta: "Share an RFQ / BOQ",
+    secondaryCta: "View coverage",
     focusBlocks: [
-      { label: "Focus", value: "Energy, oil & gas, heavy industry" },
-      { label: "Clients", value: "Private industrial groups, EPCs, utilities" },
       {
-        label: "Deliverables",
+        label: "Construction Materials",
         value:
-          "Heavy equipment supply with manufacturer documentation and QA/QC packs when required.",
+          "Structural, finishing, and jobsite essentials aligned to drawings, quantities, and delivery plans.",
+      },
+      {
+        label: "Electrical & Low Voltage",
+        value:
+          "Supply and installation support for distribution, cabling, containment, lighting, and control.",
+      },
+      {
+        label: "Plumbing, Pumps & Water",
+        value:
+          "Piping, fittings, drainage, and pumping solutions for buildings and site utilities.",
       },
     ],
     overviewOverline: "Overview",
     overviewTitle: "Miramar at a glance",
     overviewBody:
-      "Istanbul-based trading and marketing company supplying heavy equipment for oil & gas, power, and industrial projects.",
+      "Miramar is an Istanbul-based trading and services partner for construction and site development. We help clients source the right materials, organize deliveries, and execute electrical/plumbing scopes with clear documentation and practical site coordination.",
     learnMore: "Learn more",
     overviewCards: [
       {
         title: "About Miramar",
         body:
-          "Regional partner for private oil & gas, power, and industrial companies based in Istanbul.",
+          "Built for construction and site development teams that need clear scopes, bilingual support, and disciplined delivery.",
         href: "/about",
       },
       {
         title: "Services",
         body:
-          "Equipment definition, documentation and QA/QC coordination, lifecycle and replacement support.",
+          "Materials supply, electrical works, plumbing and pump systems, with schedule-aware delivery.",
         href: "/services",
       },
       {
         title: "Sectors",
         body:
-          "Upstream, midstream, power generation, industrial plants, and infrastructure clients.",
+          "Residential, commercial, industrial, infrastructure, and renovation projects across the region.",
         href: "/sectors",
       },
       {
         title: "Equipment",
         body:
-          "Rotating equipment, valves, piping and steel, and electrification packages aligned to client specs.",
+          "Construction materials, electrical systems, plumbing/pumps—aligned to specs with documentation.",
         href: "/equipment",
       },
     ],
     featureStacks: [
       {
-        overline: "Oil & gas mechanical equipment",
-        tag: "API / ISO",
-        summary: "Spec-compliant rotating equipment and valves for energy service.",
+        overline: "Materials supply & logistics",
+        tag: "Construction",
+        summary:
+          "Structural materials, finishing materials, fasteners, consumables, coordinated delivery windows.",
         bullets: [
-          "API/ISO pumps, compressors, and turbines sized for upstream and midstream services.",
-          "Gate, ball, control, and safety valves aligned to pressure class, media, and service.",
+          "Packages aligned to drawings, quantities, and delivery phasing.",
+          "Jobsite essentials with staged drop-offs to match site readiness.",
         ],
       },
       {
-        overline: "Steel & piping",
-        tag: "Mills",
-        summary: "Steel-based items for pipelines and industrial projects.",
+        overline: "Electrical works & systems",
+        tag: "Electrical",
+        summary:
+          "Panels, switchboards, conduits/trays, cables, terminations, testing and commissioning support.",
         bullets: [
-          "Line pipe, butt-weld fittings, flanges, gaskets, and bolting sets.",
-          "Structural steel and plate for industrial projects.",
+          "LV distribution with labeling, containment, and routing clarity.",
+          "Basic testing/commissioning support aligned to site requirements.",
         ],
       },
       {
-        overline: "Power & electrification",
-        tag: "Power",
-        summary: "Distribution equipment for industrial loads.",
+        overline: "Plumbing & pumping systems",
+        tag: "MEP",
+        summary:
+          "Domestic water, drainage, valves, manifolds, booster sets, dewatering and transfer pumps.",
         bullets: [
-          "Switchgear, switchboards, and motor control centers for industrial loads.",
-          "Power and control cables with accessories and terminations.",
+          "Site utilities and building services aligned to approved materials.",
+          "Commissioning inputs and spare strategies where scoped.",
         ],
       },
     ],
     whyOverline: "Why Miramar",
-    whyTitle: "Why Miramar for project buyers",
+    whyTitle: "Why Miramar for construction teams",
     whyBody:
-      "Built for clients that need specification alignment, documentation discipline, and reliable delivery.",
+      "Built for clients that need scope clarity, documentation discipline, and schedule-aware delivery.",
     whyCards: [
       {
-        title: "Technical compliance",
-        body: "API / ISO / IEC-aligned products and documentation where required.",
+        title: "Scope clarity",
+        body: "BOQ-first approach with transparent substitutions and approvals.",
       },
       {
-        title: "Documentation quality",
+        title: "Documentation",
         body:
-          "Manufacturer data books, test certificates, EN 10204 MTCs, and QA/QC packs prepared for client handover.",
+          "Datasheets, certificates where applicable, and handover basics for site records.",
       },
       {
-        title: "Transparent supply chain",
-        body: "Traceability from mill or OEM to site, with clear documentation at each step.",
+        title: "Schedule-aware delivery",
+        body: "Staged deliveries aligned to site readiness and milestones.",
       },
       {
-        title: "On-time delivery",
-        body: "Planning around project schedules, inspection windows, and site constraints.",
+        title: "Quality & safety mindset",
+        body: "Work methods aligned with site rules and project requirements.",
       },
     ],
-    hseTitle: "HSE & compliance",
+    hseTitle: "Compliance & site safety",
     hseBody:
-      "Miramar aligns equipment selection and documentation with client HSE and QA/QC frameworks. Where required, we coordinate third-party inspection (DNV, SGS, TÜV or equivalent) and deliver the associated test reports and certificates as part of the project handover package.",
+      "Miramar aligns materials and installation practices with applicable standards, project specifications, and on-site safety requirements. When required, we coordinate testing, inspections, and basic handover documentation for client records.",
   },
   tr: {
-    badge: "Istanbul | Enerji ve Endustriyel Ekipman",
-    title: "Petrol, enerji ve agir sanayi icin proje hazir tedarik.",
+    badge: "Istanbul | Insaat Malzemeleri ve Saha Hizmetleri",
+    title: "Modern insaat icin proje hazir tedarik ve saha hizmetleri.",
     positioning: CORE_POSITIONING.tr,
     body:
-      "Ekipman paketlerini sartnameye gore planliyor, dokumantasyonu erken hizaliyor ve dogrulanmis ureticilerle teslimati dusuk riskle koordine ediyoruz.",
-    primaryCta: "Teklif / paket listesi gonder",
-    secondaryCta: "Ekipman kapsami",
+      "Miramar, konut, ticari ve altyapi projeleri icin insaat malzemeleri tedarik eder; sahada elektrik, mekanik (sihhi tesisat) ve pompa sistemlerini kurulum destegiyle saglar. Kapsami erken netlestirir, satin alma/lojistigi koordine eder ve montaja destek olarak programi korur.",
+    primaryCta: "Teklif / metraj gonder",
+    secondaryCta: "Kapsami goruntule",
     focusBlocks: [
-      { label: "Odak", value: "Enerji, petrol ve gaz, agir sanayi" },
-      { label: "Musteriler", value: "Ozel sanayi gruplari, EPC'ler, hizmet saglayicilar" },
       {
-        label: "Teslimatlar",
-        value: "Uretici dokumantasyonu ve QA/QC paketleriyle agir ekipman tedarigi.",
+        label: "Insaat Malzemeleri",
+        value:
+          "Statik, ince isler ve saha ihtiyaclari; projeye, metraja ve teslim planina gore hizalanir.",
+      },
+      {
+        label: "Elektrik & Zayif Akim",
+        value:
+          "Dagitim, kablolama, kablo yolu/kanal, aydinlatma ve kontrol icin tedarik ve kurulum destegi.",
+      },
+      {
+        label: "Sihhi Tesisat & Pompalar",
+        value:
+          "Boru, baglanti elemanlari, drenaj ve pompa cozumleri; bina ve saha altyapilari icin.",
       },
     ],
     overviewOverline: "Genel Bakis",
     overviewTitle: "Miramar ozet",
     overviewBody:
-      "Istanbul merkezli, petrol ve gaz, enerji ve endustriyel projeler icin agir ekipman saglayan satis ve pazarlama sirketi.",
+      "Miramar, insaat ve saha gelistirme projeleri icin malzeme tedarigi ve saha hizmetleri sunan Istanbul merkezli bir is ortagidir. Dogru malzemeleri bulur, teslimatlari organize eder ve elektrik/sihhi tesisat islerini net dokumantasyon ve pratik koordinasyonla destekler.",
     learnMore: "Incele",
     overviewCards: [
       {
         title: "Miramar Hakkinda",
-        body: "Istanbul merkezli, petrol ve gaz, enerji ve endustriyel musterilere destek veren bolgesel tedarikci.",
+        body:
+          "Acik kapsam, iki dilli destek ve disiplinli teslimat isteyen insaat ekipleri icin.",
         href: "/about",
       },
       {
         title: "Hizmetler",
-        body: "Ekipman tanimi, dokumantasyon ve QA/QC koordinasyonu, yasam dongusu ve yedek destek.",
+        body:
+          "Malzeme tedarigi, elektrik isleri, sihhi tesisat ve pompa sistemleri; takvime duyarlı teslim.",
         href: "/services",
       },
       {
         title: "Sektorler",
-        body: "Upstream, midstream, enerji uretimi, endustriyel tesisler ve altyapi musterileri.",
+        body:
+          "Konut, ticari, endustriyel, altyapi ve renovasyon projeleri icin destegimiz.",
         href: "/sectors",
       },
       {
         title: "Ekipman",
-        body: "Doner ekipman, vanalar, borulama ve celik, elektrifikasyon paketleri; sartnameye uyumlu.",
+        body:
+          "Insaat malzemeleri, elektrik sistemleri, sihhi tesisat/pompalar; sartnameye uygun ve dokumantasyonlu.",
         href: "/equipment",
       },
     ],
     featureStacks: [
       {
-        overline: "Petrol ve gaz mekanik ekipman",
-        tag: "API / ISO",
-        summary: "Enerji hizmetine uygun doner ekipman ve vanalar.",
+        overline: "Malzeme tedarigi ve lojistik",
+        tag: "Insaat",
+        summary:
+          "Yapi ve ince is malzemeleri, baglanti elemanlari, sarf malzemeleri; zamaninda teslimat.",
         bullets: [
-          "Upstream ve midstream icin API/ISO pompalar, kompresorler ve turbinler.",
-          "Basinc sinifi ve hizmetine gore gate, ball, kontrol ve emniyet vanalari.",
+          "Cizim, metraj ve teslim fazlarina gore paketlenmis malzemeler.",
+          "Saha hazirligina gore kademeli teslimatlar.",
         ],
       },
       {
-        overline: "Celik ve borulama",
-        tag: "Mills",
-        summary: "Boru hatlari ve endustriyel projeler icin celik bazli urunler.",
+        overline: "Elektrik isleri ve sistemleri",
+        tag: "Elektrik",
+        summary:
+          "Pano, tablo, kanal/tepsi, kablo, sonlandirma; test ve devreye alma destegi.",
         bullets: [
-          "Hat borulari, kaynakli dirsekler, flanslar, contalar ve civata setleri.",
-          "Endustriyel projeler icin yapisal celik ve sac.",
+          "Zayif akim ve LV dagitim; etiketleme ve guzergah netligi ile.",
+          "Saha sartlarina gore temel test/devreye alma destegi.",
         ],
       },
       {
-        overline: "Guc ve elektrifikasyon",
-        tag: "Power",
-        summary: "Endustriyel yukler icin dagitim ekipmanlari.",
+        overline: "Sihhi tesisat ve pompa sistemleri",
+        tag: "MEP",
+        summary:
+          "Icme suyu, drenaj, vanalar, kollektorlere ek olarak hidrofor, transfer ve kurutma/dewatering pompalar.",
         bullets: [
-          "Endustriyel yukler icin switchgear, pano ve motor kontrol merkezleri.",
-          "Guc ve kontrol kablolari, sonlandirmalar ve aksesuarlar.",
+          "Onayli malzemelere gore bina ve saha altyapilari.",
+          "Kapsama gore devreye alma girdileri ve yedek parca stratejileri.",
         ],
       },
     ],
     whyOverline: "Neden Miramar",
-    whyTitle: "Proje satin almacilari icin Miramar",
+    whyTitle: "Insaat ekipleri icin Miramar",
     whyBody:
-      "Sartname uyumu, duzenli dokumantasyon ve guvenilir teslimat arayan musteriler icin tasarlandi.",
+      "Kapsam netligi, dokumantasyon duzeni ve takvime duyarlı teslimat icin tasarlandi.",
     whyCards: [
       {
-        title: "Teknik uygunluk",
-        body: "Gerekli durumlarda API / ISO / IEC ile uyumlu urunler ve dokumantasyon.",
+        title: "Kapsam netligi",
+        body: "BOQ-oncelikli yaklasim; acik alternatifler ve onaylarla.",
       },
       {
-        title: "Dokumantasyon kalitesi",
-        body: "Uretici data book'lari, test sertifikalari, EN 10204 MTC'ler ve teslim icin hazir QA/QC paketleri.",
+        title: "Dokumantasyon",
+        body:
+          "Gerekli oldugunda teknik dokumanlar, sertifikalar ve teslim evraklari.",
       },
       {
-        title: "Seffaf tedarik zinciri",
-        body: "Her adimda acik dokumantasyonla haddehane veya OEM'den sahaya kadar izlenebilirlik.",
+        title: "Takvime uygun teslim",
+        body: "Saha hazirligina ve kilometre taslarina gore kademeli teslimatlar.",
       },
       {
-        title: "Zamaninda teslimat",
-        body: "Proje takvimine, muayene araliklarina ve saha kisitlarina gore planlama.",
+        title: "Kalite ve guvenlik",
+        body: "Saha kurallari ve proje sartlarina gore calisma yontemleri.",
       },
     ],
-    hseTitle: "HSE ve uygunluk",
+    hseTitle: "Uygunluk ve saha guvenligi",
     hseBody:
-      "Miramar, ekipman secimi ve dokumantasyonu musteri HSE ve QA/QC cerceveleriyle hizalar. Gerektiginde ucuncu taraf muayeneleri (DNV, SGS, TUV veya dengi) koordine edilir ve test raporlari ile sertifikalar teslim paketine dahil edilir.",
+      "Miramar, malzemeler ve uygulamalari ilgili standartlar, proje sartnameleri ve saha guvenlik kurallariyla hizalar. Gerektiginde test, muayene ve temel teslim dokumantasyonunu koordine eder.",
   },
 } as const;
 
@@ -256,12 +284,12 @@ export default function Home() {
                   {c.secondaryCta}
                 </Link>
               </div>
-              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {c.focusBlocks.map((item, idx) => (
                   <AnimatedCard
                     key={item.label}
                     float
-                    className="h-full min-h-[150px] border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm"
+                    className="h-full min-h-[160px] border border-slate-700/70 bg-white/5 px-5 py-4 backdrop-blur-sm"
                   >
                     <div className="flex items-center justify-between">
                       <p className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
@@ -271,7 +299,9 @@ export default function Home() {
                         {idx + 1}
                       </span>
                     </div>
-                    <p className="mt-2 text-sm font-semibold text-slate-100">{item.value}</p>
+                    <p className="mt-2 text-sm font-semibold text-slate-100 leading-relaxed">
+                      {item.value}
+                    </p>
                   </AnimatedCard>
                 ))}
               </div>
@@ -281,7 +311,7 @@ export default function Home() {
               <AnimatedCard className="overflow-hidden">
                 <InteractiveImage
                   src="/miramar-3d-hero.png"
-                  alt="Miramar industrial 3D visual"
+                  alt="Miramar construction systems visual"
                   width={1024}
                   height={540}
                   className="w-full rounded-3xl object-cover"
@@ -300,9 +330,7 @@ export default function Home() {
                         {feature.tag}
                       </span>
                     </div>
-                    <p className="mt-3 text-sm font-semibold text-white">
-                      {feature.summary}
-                    </p>
+                    <p className="mt-3 text-sm font-semibold text-white">{feature.summary}</p>
                     <ul className="mt-2 space-y-1.5 text-xs text-slate-200/90">
                       {feature.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-2">
@@ -326,7 +354,7 @@ export default function Home() {
               {c.overviewOverline}
             </p>
             <h2 className="text-2xl font-semibold sm:text-3xl">{c.overviewTitle}</h2>
-            <p className="text-sm text-slate-300 sm:text-base">{c.overviewBody}</p>
+            <p className="text-sm text-slate-300 sm:text-base leading-relaxed">{c.overviewBody}</p>
           </div>
 
           <div className="mt-8 grid gap-8 md:grid-cols-2">
@@ -365,7 +393,7 @@ export default function Home() {
             {c.whyCards.map((item) => (
               <AnimatedCard key={item.title} className="h-full p-5">
                 <p className="text-sm font-semibold text-white">{item.title}</p>
-                <p className="mt-2 text-sm text-slate-200">{item.body}</p>
+                <p className="mt-2 text-sm text-slate-200 leading-relaxed">{item.body}</p>
               </AnimatedCard>
             ))}
           </div>
@@ -381,7 +409,7 @@ export default function Home() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold text-white">{c.hseTitle}</h3>
-                <p className="text-sm text-slate-200">{c.hseBody}</p>
+                <p className="text-sm text-slate-200 leading-relaxed">{c.hseBody}</p>
               </div>
             </div>
           </AnimatedCard>
@@ -390,5 +418,3 @@ export default function Home() {
     </div>
   );
 }
-
-

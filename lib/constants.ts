@@ -1,20 +1,20 @@
 export const CORE_POSITIONING = {
-  en: "Istanbul-based energy and industrial equipment supplier for oil and gas, power, and heavy industry projects in Turkiye and nearby markets.",
-  tr: "Istanbul merkezli enerji ve endustriyel ekipman tedarikcisi; Turkiye ve yakin pazarlardaki petrol, enerji ve agir sanayi projeleri icin.",
+  en: "Istanbul-based supplier and service provider for construction and site development—materials supply, electrical and plumbing systems, pumps, and site preparation support.",
+  tr: "Istanbul merkezli, insaat ve saha gelistirme projeleri icin malzeme tedarigi, elektrik ve mekanik (sihhi tesisat) sistemleri, pompalar ve saha hazirlik destegi sunan tedarikci ve hizmet saglayici.",
 } as const;
 
 export const REGISTERED_ADDRESS =
   "Ic Kapi, Cumhuriyet Mah., Ergenekon Cd. Ahmetbey Plaza, 34380 Sisli / Istanbul, Turkiye";
 
 export const MAP_LINK =
-  "https://www.google.com/maps/place/%C4%B0%C3%87+KAPI,+Cumhuriyet,+Ergenekon+Cd.+AHMETBEY+PLAZA,+34380+%C5%9Ei%C5%9Fli/%C4%B0stanbul,+T%C3%BCrkiye";
+  "https://www.google.com/maps/search/?api=1&query=Ic+Kapi%2C+Cumhuriyet+Mah.%2C+Ergenekon+Cd.+Ahmetbey+Plaza%2C+34380+Sisli%2F+Istanbul%2C+Turkiye";
 
 export const MAP_EMBED =
-  "https://www.google.com/maps?q=%C4%B0%C3%87+KAPI,+Cumhuriyet,+Ergenekon+Cd.+AHMETBEY+PLAZA,+34380+%C5%9Ei%C5%9Fli/%C4%B0stanbul,+T%C3%BCrkiye&output=embed";
+  "https://www.google.com/maps?q=Ic+Kapi%2C+Cumhuriyet+Mah.%2C+Ergenekon+Cd.+Ahmetbey+Plaza%2C+34380+Sisli%2F+Istanbul%2C+Turkiye&output=embed";
 
 export const LEGAL_LINE = {
-  en: "Miramar Enerji ve Endustriyel Ekipman Tic. Ltd. Sti. — Istanbul, Turkiye.",
-  tr: "Miramar Enerji ve Endustriyel Ekipman Tic. Ltd. Sti. — Istanbul, Turkiye.",
+  en: "Miramar Construction Materials & Site Services Ltd. Istanbul, Turkiye.",
+  tr: "Miramar Insaat Malzemeleri ve Saha Hizmetleri Ltd. Istanbul, Turkiye.",
 } as const;
 
 export const SPEC_DISCLAIMER = {

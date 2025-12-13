@@ -13,12 +13,13 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Miramar - Energy & Industrial Equipment",
+  title: "Miramar - Construction Materials & Site Services",
   description:
-    "Istanbul-based trading and marketing company supplying energy and industrial equipment for oil & gas, power, and heavy industry projects.",
+    "Istanbul-based supplier and service provider for construction and site development—materials supply, electrical and plumbing systems, pumps, and site preparation support.",
   icons: {
-    icon: "/miramar-favicon.png",
-    shortcut: "/miramar-favicon.png",
+    icon: ["/miramar-favicon.png", "/favicon.ico"],
+    shortcut: ["/miramar-favicon.png", "/favicon.ico"],
+    apple: ["/miramar-favicon.png"],
   },
 };
 

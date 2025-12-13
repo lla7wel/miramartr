@@ -12,89 +12,115 @@ const SECTORS_COPY = {
     heading: "Where Miramar operates.",
     positioning: CORE_POSITIONING.en,
     lead:
-      "Reliability, uptime, and technical fit drive our work. We tailor heavy equipment supply to the demands of each sector.",
+      "We support construction and site development projects where reliable materials supply and well-coordinated MEP execution are critical.",
     sectors: [
       {
-        title: "Upstream oil & gas",
-        body: "Field development, gathering systems, surface facilities, and early production infrastructure.",
-        image: "/miramar-sector-upstream.png",
+        title: "Residential & mixed-use",
+        body: "Apartments, compounds, and mixed developments—materials + building services support.",
+        image: "/miramar-service-supply.png",
       },
       {
-        title: "Midstream & downstream",
-        body: "Pipelines, terminals, storage farms, and refinery or petrochemical units.",
-        image: "/miramar-sector-midstream.png",
+        title: "Commercial buildings",
+        body: "Offices, retail, hospitality—structured supply and coordinated electrical/plumbing scopes.",
+        image: "/miramar-contact-office.png",
       },
       {
-        title: "Power generation & utilities",
-        body: "Thermal and gas-fired plants, substations, grid support, and backup systems.",
-        image: "/miramar-sector-power.png",
+        title: "Industrial facilities & warehouses",
+        body: "Fit-out and utility-ready installations for operational sites (non-specialized).",
+        image: "/miramar-service-logistics.png",
       },
       {
-        title: "Industrial plants",
-        body: "Steel, cement, process plants, and other energy-intensive industrial sites.",
-        image: "/miramar-sector-industrial.png",
+        title: "Infrastructure & utilities",
+        body: "Site utilities, civil preparation support, pumping and drainage solutions.",
+        image: "/miramar-3d-power.png",
       },
       {
-        title: "Infrastructure & logistics",
-        body: "Ports, logistics hubs, storage terminals, and fuel distribution networks.",
-        image: "/miramar-sector-infrastructure.png",
+        title: "Renovation & retrofit",
+        body: "Upgrades, replacements, and phased works with minimal disruption.",
+        image: "/miramar-service-lifecycle.png",
       },
     ],
     complianceTitle: "Compliance alignment",
     complianceBody:
-      "Project documentation, QA/QC packs, and inspection protocols are aligned with each sector's expectations.",
+      "Quality checks, documentation, and on-site practices aligned to project specifications and site rules.",
   },
   tr: {
-    badge: "Sectors",
-    heading: "Where Miramar operates.",
+    badge: "Sektorler",
+    heading: "Miramar nerede calisir.",
     positioning: CORE_POSITIONING.tr,
     lead:
-      "Reliability, uptime, and technical fit drive our work. We tailor heavy equipment supply to the demands of each sector.",
+      "Guvenilir malzeme tedarigi ve iyi koordine edilmis MEP uygulamalarinin kritik oldugu insaat ve saha projelerini destekliyoruz.",
     sectors: [
       {
-        title: "Upstream oil & gas",
-        body: "Field development, gathering systems, surface facilities, and early production infrastructure.",
-        image: "/miramar-sector-upstream.png",
+        title: "Konut ve karmasik projeler",
+        body: "Daireler, siteler ve karmasik gelismeler—malzeme ve bina servisleri destegi.",
+        image: "/miramar-service-supply.png",
       },
       {
-        title: "Midstream & downstream",
-        body: "Pipelines, terminals, storage farms, and refinery or petrochemical units.",
-        image: "/miramar-sector-midstream.png",
+        title: "Ticari binalar",
+        body: "Ofis, perakende, misafirperverlik—duzenli tedarik ve elektrik/su tesisati koordinasyonu.",
+        image: "/miramar-contact-office.png",
       },
       {
-        title: "Power generation & utilities",
-        body: "Thermal and gas-fired plants, substations, grid support, and backup systems.",
-        image: "/miramar-sector-power.png",
+        title: "Endustriyel tesisler ve depolar",
+        body: "Isletmeye hazir altyapi ve uygulamalar icin (ozel olmayan) montaj ve fit-out destegi.",
+        image: "/miramar-service-logistics.png",
       },
       {
-        title: "Industrial plants",
-        body: "Steel, cement, process plants, and other energy-intensive industrial sites.",
-        image: "/miramar-sector-industrial.png",
+        title: "Altyapi ve kamu hizmetleri",
+        body: "Saha altyapisi, kazı/duzenleme girdileri, pompa ve drenaj cozumleri.",
+        image: "/miramar-3d-power.png",
       },
       {
-        title: "Infrastructure & logistics",
-        body: "Ports, logistics hubs, storage terminals, and fuel distribution networks.",
-        image: "/miramar-sector-infrastructure.png",
+        title: "Renovasyon ve yenileme",
+        body: "Yukseltme, degisim ve asamali isler; kesintiyi en aza indirir.",
+        image: "/miramar-service-lifecycle.png",
       },
     ],
-    complianceTitle: "Compliance alignment",
+    complianceTitle: "Uygunluk hizalamasi",
     complianceBody:
-      "Project documentation, QA/QC packs, and inspection protocols are aligned with each sector's expectations.",
+      "Kalite kontrolleri, dokumantasyon ve saha uygulamalari proje sartlari ve saha kurallariyla hizalanir.",
   },
 } as const;
 
 const FLOW_STEPS = {
   en: [
-    { title: "Define scope", body: "Clarify service, conditions, and documentation expectations." },
-    { title: "Match equipment", body: "Align mills and OEMs to specifications and inspection plans." },
-    { title: "Documentation & QA/QC", body: "Coordinate data books, certificates, and inspection records for handover." },
-    { title: "Delivery & lifecycle", body: "Schedule-aware delivery with replacement and upgrade support." },
+    {
+      title: "Define scope",
+      body: "Confirm BOQ, drawings, specs, delivery phasing, and site constraints.",
+    },
+    {
+      title: "Plan & match",
+      body: "Propose approved materials, controlled alternatives, and a realistic schedule.",
+    },
+    {
+      title: "Deliver & execute",
+      body: "Staged deliveries and coordinated on-site electrical/plumbing/pump works.",
+    },
+    {
+      title: "Handover basics",
+      body:
+        "As-built notes (as scoped), datasheets/certificates (where applicable), and closeout items.",
+    },
   ],
   tr: [
-    { title: "Kapsami belirle", body: "Hizmeti, sartlari ve dokumantasyon beklentilerini netlestir." },
-    { title: "Ekipmani eslestir", body: "Haddehane ve OEM'leri sartnameler ve muayene planlariyla hizala." },
-    { title: "Dokumantasyon ve QA/QC", body: "Teslim icin data book'lar, sertifikalar ve muayene kayitlarini koordine et." },
-    { title: "Teslimat ve yasam dongusu", body: "Takvime duyarlı teslimat, yedek ve modernizasyon destegi sagla." },
+    {
+      title: "Kapsami belirle",
+      body: "BOQ, cizimler, sartlar, teslim fazlari ve saha kisitlarini netlestir.",
+    },
+    {
+      title: "Planla ve eslestir",
+      body: "Onayli malzemeler, kontrol altinda alternatifler ve gercekci program oner.",
+    },
+    {
+      title: "Teslim et ve uygula",
+      body: "Kademeli teslimatlar; elektrik/su/pompa isleri koordineli sekilde sahada.",
+    },
+    {
+      title: "Teslim ve kapanis",
+      body:
+        "Kapsama gore as-built notlari, gerekli oldugunda datasheet/sertifikalar ve kapanis dokumanlari.",
+    },
   ],
 } as const;
 
@@ -127,7 +153,7 @@ export default function SectorsPage() {
             />
             <div className="flex flex-1 flex-col gap-3">
               <h2 className="text-[1.05rem] font-semibold text-white">{sector.title}</h2>
-              <p className="text-sm text-slate-200">{sector.body}</p>
+              <p className="text-sm text-slate-200 leading-relaxed">{sector.body}</p>
             </div>
           </AnimatedCard>
         ))}
@@ -157,7 +183,7 @@ export default function SectorsPage() {
                   {stepLabel} {idx + 1}
                 </p>
                 <p className="mt-2 text-sm font-semibold text-white">{step.title}</p>
-                <p className="mt-1 text-sm text-slate-200">{step.body}</p>
+                <p className="mt-1 text-sm text-slate-200 leading-relaxed">{step.body}</p>
               </AnimatedCard>
             ))}
           </div>
@@ -178,7 +204,7 @@ export default function SectorsPage() {
                   {stepLabel} {idx + 1}
                 </p>
                 <p className="mt-2 text-sm font-semibold text-white">{step.title}</p>
-                <p className="mt-1 text-sm text-slate-200">{step.body}</p>
+                <p className="mt-1 text-sm text-slate-200 leading-relaxed">{step.body}</p>
               </AnimatedCard>
             ))}
           </div>
@@ -192,9 +218,8 @@ export default function SectorsPage() {
             QA/QC
           </div>
         </div>
-        <p className="mt-2 text-sm text-slate-200">{t.complianceBody}</p>
+        <p className="mt-2 text-sm text-slate-200 leading-relaxed">{t.complianceBody}</p>
       </AnimatedCard>
     </div>
   );
 }
-

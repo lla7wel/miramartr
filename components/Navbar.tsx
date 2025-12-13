@@ -14,17 +14,17 @@ const NAV_LABELS = {
     sectors: "Sectors",
     equipment: "Equipment",
     contact: "Contact",
-    tagline: "Energy & Industrial Equipment",
+    tagline: "Construction Materials & Site Services",
     menu: "Menu",
   },
   tr: {
     home: "Ana Sayfa",
-    about: "Hakkımızda",
+    about: "Hakkimizda",
     services: "Hizmetler",
-    sectors: "Sektörler",
+    sectors: "Sektorler",
     equipment: "Ekipman",
-    contact: "İletişim",
-    tagline: "Energy & Industrial Equipment",
+    contact: "Iletisim",
+    tagline: "Insaat Malzemeleri ve Saha Hizmetleri",
     menu: "Menu",
   },
 } as const;
@@ -67,9 +67,7 @@ export function Navbar() {
             <span className="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-50 sm:text-base">
               Miramar
             </span>
-            <span className="text-[11px] text-slate-400 sm:text-xs">
-              {labels.tagline}
-            </span>
+            <span className="text-[11px] text-slate-400 sm:text-xs">{labels.tagline}</span>
           </div>
         </Link>
 
