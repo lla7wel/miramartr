@@ -18,6 +18,7 @@ export function ServiceGrid() {
               src={pillar.image}
               alt={pillar.title[lang]}
               className="h-48 rounded-none border-x-0 border-t-0"
+              priority={index === 0}
             />
             <div className="flex flex-1 flex-col p-5">
               <div className="flex items-center justify-between gap-4">

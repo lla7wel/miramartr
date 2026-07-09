@@ -25,6 +25,7 @@ export function SectorsPage() {
                   src={sector.image}
                   alt={sector.title[lang]}
                   className="h-44 rounded-none border-x-0 border-t-0"
+                  priority={index === 0}
                 />
                 <div className="p-5">
                   <IconBadge icon={sector.icon} />
