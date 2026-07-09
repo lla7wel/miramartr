@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Miramar
 
-## Getting Started
+Production rebuild of the Miramar company website, live at
+[miramartr.vercel.app](https://miramartr.vercel.app).
 
-First, run the development server:
+Miramar is an Istanbul-based supplier and service provider for construction and
+site development: construction materials, electrical and plumbing systems,
+pumps, and site preparation support. The site keeps the verified business facts
+from the previous version while upgrading the project into a modern, documented,
+resume-ready Next.js codebase.
+
+## Highlights
+
+- Premium industrial visual system with graphite, steel, safety red, and amber accents.
+- Bilingual English/Turkish interface with persisted language preference.
+- Structured content layer separated from page and component code.
+- Interactive hero visual with desktop Three.js scene and static fallback.
+- Filterable equipment/material coverage.
+- Validated RFQ contact flow using a no-cost `mailto:` fallback.
+- App Router metadata, Open Graph/Twitter tags, sitemap, robots, and custom 404.
+- Professional documentation with architecture, design, deployment, SEO, and component notes.
+- Lint, typecheck, production build, and Playwright smoke-test scripts.
+
+## Tech Stack
+
+- Next.js App Router
+- React and TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- Three.js / React Three Fiber / Drei
+- Lucide React icons
+- React Hook Form and Zod
+- Playwright for smoke tests
+- Vercel free-tier deployment
+
+## Local Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run typecheck
+npm run build
+npm run test:e2e
+```
 
-## Learn More
+If Playwright browsers are missing on a fresh machine, run:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx playwright install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+app/                  Next.js routes, metadata, sitemap, robots
+components/layout/    Site shell, navigation, footer
+components/pages/     Route-level page compositions
+components/sections/  Hero, service, process, contact, equipment modules
+components/ui/        Reusable UI primitives
+content/              Typed bilingual content and page data
+docs/                 Architecture, design, deployment, SEO docs
+lib/                  Constants, language types, small utilities
+tests/e2e/            Playwright smoke tests
+```
 
-## Deploy on Vercel
+## Documentation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Architecture](docs/ARCHITECTURE.md)
+- [Design System](docs/DESIGN_SYSTEM.md)
+- [Components](docs/COMPONENTS.md)
+- [Deployment](docs/DEPLOYMENT.md)
+- [SEO & Accessibility](docs/SEO_ACCESSIBILITY.md)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Screenshots
+
+Final screenshot assets should be refreshed after visual QA:
+
+- `docs/screenshots/home-desktop.png`
+- `docs/screenshots/home-mobile.png`
+- `docs/screenshots/contact-desktop.png`
+
+## Deployment
+
+The project is designed for GitHub + Vercel with no paid services, databases, or
+external APIs. The contact form uses a validated `mailto:` flow by default, so it
+does not require backend infrastructure or environment variables.
+
+## Future Improvements
+
+- Add real project photography if Miramar has approved assets.
+- Add a configured free email provider only if real credentials and env vars are supplied.
+- Add Turkish route alternates if a URL-level i18n strategy becomes a requirement.
+- Add Lighthouse budget automation once production performance targets are locked.
