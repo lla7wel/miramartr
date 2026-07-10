@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-
-export type Language = "en" | "tr";
+import { isLanguage, type Language } from "@/lib/language";
 
 interface LanguageContextValue {
   lang: Language;
@@ -16,9 +15,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const stored = typeof window !== "undefined" ? localStorage.getItem("miramar-lang") : null;
-    if (stored === "en" || stored === "tr") {
+    if (isLanguage(stored)) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setLangState(stored);
+      document.documentElement.lang = stored;
     }
   }, []);
 
@@ -26,14 +26,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setLangState(value);
     if (typeof window !== "undefined") {
       localStorage.setItem("miramar-lang", value);
+      document.documentElement.lang = value;
     }
   };
 
-  return (
-    <LanguageContext.Provider value={{ lang, setLang }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+  return <LanguageContext.Provider value={{ lang, setLang }}>{children}</LanguageContext.Provider>;
 }
 
 export function useLanguage(): LanguageContextValue {

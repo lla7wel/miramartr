@@ -1,21 +1,49 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
-import BrandBackground from "../components/BrandBackground";
-import BackgroundOrbits from "../components/BackgroundOrbits";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
-import { LanguageProvider } from "../components/LanguageProvider";
+import { SiteShell } from "@/components/layout/site-shell";
+import { metadataCopy } from "@/content/site";
+import { SITE_URL } from "@/lib/constants";
 
 const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Miramar - Construction Materials & Site Services",
-  description:
-    "Istanbul-based supplier and service provider for construction and site development—materials supply, electrical and plumbing systems, pumps, and site preparation support.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: metadataCopy.home.en.title,
+    template: "%s | Miramar",
+  },
+  description: metadataCopy.home.en.description,
+  applicationName: "Miramar",
+  authors: [{ name: "Miramar" }],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Miramar",
+    title: metadataCopy.home.en.title,
+    description: metadataCopy.home.en.description,
+    images: [
+      {
+        url: "/miramar-3d-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Miramar construction materials and site services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: metadataCopy.home.en.title,
+    description: metadataCopy.home.en.description,
+    images: ["/miramar-3d-hero.png"],
+  },
   icons: {
     icon: ["/miramar-favicon.png", "/favicon.ico"],
     shortcut: ["/miramar-favicon.png", "/favicon.ico"],
@@ -23,25 +51,21 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#080b0e",
+};
+
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.className} bg-slate-950 text-slate-50 antialiased scroll-smooth relative`}
-      >
-        <BrandBackground />
-        <BackgroundOrbits />
-        <LanguageProvider>
-          <div className="relative z-10 flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </LanguageProvider>
+      <body className={`${manrope.className} antialiased`}>
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );
