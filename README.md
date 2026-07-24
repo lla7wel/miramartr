@@ -1,7 +1,11 @@
 # Miramar
 
+[![CI](https://github.com/lla7wel/miramartr/actions/workflows/e2e.yml/badge.svg)](https://github.com/lla7wel/miramartr/actions/workflows/e2e.yml)
+
 Production rebuild of the Miramar company website, live at
-[miramartr.vercel.app](https://miramartr.vercel.app).
+[tr-miramar.com](https://tr-miramar.com).
+
+**Portfolio case study:** [design, architecture, and verification](https://www.mohamedelbahlool.com/en/work/miramar/)
 
 Miramar is an Istanbul-based supplier and service provider for construction and
 site development: construction materials, electrical and plumbing systems,
@@ -81,11 +85,9 @@ tests/e2e/            Playwright smoke tests
 
 ## Screenshots
 
-Final screenshot assets should be refreshed after visual QA:
-
-- `docs/screenshots/home-desktop.png`
-- `docs/screenshots/home-mobile.png`
-- `docs/screenshots/contact-desktop.png`
+| Desktop home | Mobile home | Contact |
+|---|---|---|
+| ![Miramar desktop homepage](docs/screenshots/home-desktop.png) | ![Miramar mobile homepage](docs/screenshots/home-mobile.png) | ![Miramar contact page](docs/screenshots/contact-desktop.png) |
 
 ## Deployment
 
@@ -99,3 +101,7 @@ does not require backend infrastructure or environment variables.
 - Add a configured free email provider only if real credentials and env vars are supplied.
 - Add Turkish route alternates if a URL-level i18n strategy becomes a requirement.
 - Add Lighthouse budget automation once production performance targets are locked.
+
+## License
+
+[MIT](LICENSE)
